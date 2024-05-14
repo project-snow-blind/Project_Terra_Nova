@@ -51,6 +51,9 @@ public class Expedition : MonoBehaviour
 
 
 
-    
+    public void TtemBbang()
+    {
+
+    }
 }
 

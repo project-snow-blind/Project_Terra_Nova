@@ -21,4 +21,10 @@ public class Core : MonoBehaviour
     {
         Core_Crew[i] = newcrew;
     }
+    public ExpeditionCrew Ttembang3(int i)
+    {
+        ExpeditionCrew ttembangcrew = Core_Crew[i];
+
+        return ttembangcrew;
+    }
 }
