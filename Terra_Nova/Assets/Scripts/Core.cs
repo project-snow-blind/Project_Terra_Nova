@@ -15,13 +15,16 @@ public class Core : MonoBehaviour
     private void Awake()
     {
         core = this;
+        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 36f);
+        Crew_Add(Oates);
     }
 
     private void Start()
     {
-        ExpeditionCrew dummy = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "Dummy", 0, 0, 0, 0f);
-        Crew_Add(dummy);
 
+        //ExpeditionCrew dummy = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "Dummy", 0, 0, 0, 0f);
+        //Crew_Add(dummy);
+        
         GameObject audioobj = GameObject.Find("Audio Source");
         aud = audioobj.GetComponent<AudioSc>();
         GameObject audioobj2 = GameObject.Find("BGM Source");

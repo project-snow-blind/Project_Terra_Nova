@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - 
-  - HighpriorLayer
+  - 
   - 
   - 
   - 
@@ -40,4 +40,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HighpriorLayer
+    uniqueID: 1509006397
     locked: 0
