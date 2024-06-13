@@ -45,6 +45,8 @@ public enum EQUIPMENT_TRAIT//장비 트레잇 - 가진 장구류 기반
     EQUIP_SKI,//스키 착용
     EQUIP_SKI_UPGRADE,//비욜란스키
     CONTAINED_SNOWMOBILE,//스노모빌 운반중 - 스콧 탐험대는 고장난 스노모빌을 버리기 아깝다고 직접 끌고다녔음
+    WOOL_CLOTH,
+    FUR_CLOTH
 }
 public enum EVENT_TRAIT//이벤트 트레잇 - 질병 등 상태이상 기반
 {
@@ -100,6 +102,7 @@ public struct ExpeditionCrew
         moraleMAX = morale;
         this.temperature = temperature;
     }
+
     //public ExpeditionCrew(int id, CREW_MOVEMENT move, CREW_CLOTH cloth, string crew_name, float hp, float hunger, float morale, float temperature)
     //{
 
@@ -123,7 +126,69 @@ public struct ExpeditionCrew
     //}
 }
 
+public enum EVENT_TAG
+{
+    HISTORICAL,
+    GOOD,
+    BAD
+    
+}
+public struct Event
+{
+    public float EHV;//Event Happen Variable
+    public bool event_trigger;//이벤트 조건
+    public string event_title;//이벤트 제목
+    public string event_desc;//이벤트 설명
+    public bool event_repeatable;
+    public List<EVENT_TAG> event_tag;//이벤트 분류 태그
+    public List<EventOptions> option;
 
+    public Event(float mtth, bool trigger, string title, string desc, bool repeat, List<EVENT_TAG> tag, List<EventOptions> options)
+    {
+        EHV = mtth;
+        event_trigger = trigger;
+        event_title = title;
+        event_repeatable = repeat;
+        event_desc = desc;
+        event_tag = tag;
+        option = options;
+    }
+}
+
+public struct EventOptions
+{
+    public string option_title, option_desc;
+    public int eventtarget;
+    public List<EffectVariations> eventoption;
+
+    public EventOptions(string title, string desc, int target, List<EffectVariations> effect = default)
+    {
+        option_title = title;
+        option_desc = desc;
+        eventtarget = target;
+        eventoption = new List<EffectVariations>();
+        eventoption = effect;
+    }
+}
+
+public enum EffectVariationEnum
+{
+    HP,
+    HUN,
+    TRU
+}
+
+public struct EffectVariations
+{
+    public EffectVariationEnum effect;
+    public float var;
+
+    public EffectVariations(EffectVariationEnum eff, float var)
+    {
+        effect = eff;
+        this.var = var;
+    }
+}
 public class GameSetting : MonoBehaviour
 {
     // Start is called before the first frame update

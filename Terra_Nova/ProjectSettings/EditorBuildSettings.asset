@@ -12,4 +12,5 @@ EditorBuildSettings:
     path: Assets/Scenes/ExpScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dcc6e172a9c5b9147b4789be5afb1179, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 4e16d0fe831491b41bdeedddf01d5fa9, type: 2}

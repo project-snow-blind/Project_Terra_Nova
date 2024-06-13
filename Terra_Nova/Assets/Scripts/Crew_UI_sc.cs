@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,10 +13,11 @@ public class Crew_UI_sc : MonoBehaviour
     [SerializeField]
     private int crewnumber = 0;
 
-    
+    //public event EventHandler Crew_Changed;
     // Start is called before the first frame update
     void Start()
     {
+        Core.core.OnCrewChanged += crew_statue_changed;
         List<ExpeditionCrew> check = Core.core.Crew_Read_All();
         
         if(check.Count - 1 < crewnumber)
@@ -35,6 +37,10 @@ public class Crew_UI_sc : MonoBehaviour
         
     }
 
+    private void crew_statue_changed(object sender, EventArgs eventArgs)
+    {
+        UIupdatecrewinfo();
+    }
     public void UIupdatecrewinfo()
     {
         ExpeditionCrew crew = Core.core.Crew_Read(crewnumber);

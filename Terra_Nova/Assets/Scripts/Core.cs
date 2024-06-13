@@ -7,6 +7,9 @@ using Random = UnityEngine.Random;
 
 public class Core : MonoBehaviour
 {
+    public event EventHandler OnCrewChanged;
+
+
     public static Core core;
     public AudioSc aud;
     public AudioSc BGM;
@@ -15,8 +18,16 @@ public class Core : MonoBehaviour
     private void Awake()
     {
         core = this;
-        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 36f);
+        List<CREW_TRAIT> oates_list = new List<CREW_TRAIT> { CREW_TRAIT.SKI_CHAMP, CREW_TRAIT.OATES_POLAR_CAVARLY };
+        List<EQUIPMENT_TRAIT> oates_list2 = new List<EQUIPMENT_TRAIT> {EQUIPMENT_TRAIT.FUR_CLOTH, EQUIPMENT_TRAIT.WOOL_CLOTH, EQUIPMENT_TRAIT.CONTAINED_SNOWMOBILE};
+        List<EVENT_TRAIT> oates_list3 = new List<EVENT_TRAIT> {EVENT_TRAIT.CRITICAL_FROST_BITE, EVENT_TRAIT.EXHAUSTED};
+        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 36f, oates_list2, oates_list3, oates_list);
         Crew_Add(Oates);
+
+        //테스트용 구문
+        Crew_Add(Create_Crew());
+        Crew_Add(Create_Crew());
+        Crew_Add(Create_Crew());
     }
 
     private void Start()
@@ -270,5 +281,10 @@ public class Core : MonoBehaviour
         }
         return output;
 
+    }
+
+    public void Crew_Statue_Changed()
+    {
+        OnCrewChanged?.Invoke(this, EventArgs.Empty);
     }
 }
