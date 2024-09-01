@@ -14,7 +14,13 @@ public class Core : MonoBehaviour
     public AudioSc aud;
     public AudioSc BGM;
     private int IDpool = 0;
-    private List<ExpeditionCrew> Core_Crew = new List<ExpeditionCrew>();
+    
+    [SerializeField]
+    private Crew_Sc[] crews;
+    [SerializeField]
+    private int crewcount = 0;
+
+    //private List<ExpeditionCrew> Core_Crew = new List<ExpeditionCrew>();
     private void Awake()
     {
         core = this;
@@ -22,12 +28,21 @@ public class Core : MonoBehaviour
         List<EQUIPMENT_TRAIT> oates_list2 = new List<EQUIPMENT_TRAIT> {EQUIPMENT_TRAIT.FUR_CLOTH, EQUIPMENT_TRAIT.WOOL_CLOTH, EQUIPMENT_TRAIT.CONTAINED_SNOWMOBILE};
         List<EVENT_TRAIT> oates_list3 = new List<EVENT_TRAIT> {EVENT_TRAIT.CRITICAL_FROST_BITE, EVENT_TRAIT.EXHAUSTED};
         ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 36f, oates_list2, oates_list3, oates_list);
+
+        
         Crew_Add(Oates);
 
         //테스트용 구문
         Crew_Add(Create_Crew());
         Crew_Add(Create_Crew());
         Crew_Add(Create_Crew());
+
+        //ExpeditionCrew[] arr = Core_Crew.OfType<ExpeditionCrew>().ToArray();
+        //int crew_count = arr.Length;
+        //for (int i = 0; i < crew_count; i++)
+        //{
+        //    crews[crew_count].Testing_Normalize_Crew(arr[crew_count]);
+        //}
     }
 
     private void Start()
@@ -43,27 +58,46 @@ public class Core : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
+
+
     public void Crew_Add(ExpeditionCrew newcrew)
     {
-        Core_Crew.Add(newcrew);
+        //Core_Crew.Add(newcrew);
+        if(crewcount <= 4)
+        {
+            crews[crewcount].Testing_Normalize_Crew(newcrew);
+            crewcount++;
+        }
+        //crewcount++;
     }
     public void Crew_update(int i, ExpeditionCrew newcrew)
     {
-        ExpeditionCrew[] arr = Core_Crew.OfType<ExpeditionCrew>().ToArray();
-        arr[i] = newcrew;
-        List<ExpeditionCrew> newone = arr.OfType<ExpeditionCrew>().ToList();
-        Core_Crew = newone;
+        //ExpeditionCrew[] arr = Core_Crew.OfType<ExpeditionCrew>().ToArray();
+        crews[i].Testing_Normalize_Crew(newcrew);
+        //List<ExpeditionCrew> newone = arr.OfType<ExpeditionCrew>().ToList();
+        //Core_Crew = newone;
     }
     public ExpeditionCrew Crew_Read(int i)
     {
-        ExpeditionCrew Output = Core_Crew[i];
+        Crew_Sc dummy = crews[i];
+        dummy.Export_Crew_Const();
+        
+        ExpeditionCrew Output = dummy.export;
 
         return Output;
     }
     public List<ExpeditionCrew> Crew_Read_All()
     {
         List<ExpeditionCrew> Output = new List<ExpeditionCrew>();
-        Output = Core_Crew;
+        int length = crews.Length;
+        for(int i = 0; i < length; i++)
+        {
+            Crew_Sc dummy = crews[i];
+            dummy.Export_Crew_Const();
+            ExpeditionCrew newone = dummy.export;
+            Output.Add(newone);
+        }
+        //Output = Core_Crew;
 
         return Output;
     }
