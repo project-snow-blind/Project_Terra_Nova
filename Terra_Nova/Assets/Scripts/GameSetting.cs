@@ -78,10 +78,10 @@ public struct ExpeditionCrew
     public List<CREW_TRAIT> CREW_TRAIT;
     //public CREW_TRAIT[] CREW_TRAIT;
     public string CREW_NAME;
-    public float HPMAX, HP, hungerMAX, hunger, moraleMAX, morale, temperature;
-    
+    public float HPMAX, HP, hungerMAX, hunger, moraleMAX, morale;
+    public int temperature,portrait;
 
-    public ExpeditionCrew(int id, CREW_MOVEMENT move, CREW_CLOTH cloth, string crew_name, float hp, float hunger, float morale, float temperature = 36f, List<EQUIPMENT_TRAIT> eq_trait = default, List<EVENT_TRAIT> ev_trait = default, List<CREW_TRAIT> crew_trait = default)
+    public ExpeditionCrew(int id, CREW_MOVEMENT move, CREW_CLOTH cloth, string crew_name, float hp, float hunger, float morale, int temperature = 5, List<EQUIPMENT_TRAIT> eq_trait = default, List<EVENT_TRAIT> ev_trait = default, List<CREW_TRAIT> crew_trait = default, int portrait = 0)
     {
         
         CREW_ID = id;
@@ -101,6 +101,7 @@ public struct ExpeditionCrew
         this.morale = morale;
         moraleMAX = morale;
         this.temperature = temperature;
+        this.portrait = portrait;
     }
 
     //public ExpeditionCrew(int id, CREW_MOVEMENT move, CREW_CLOTH cloth, string crew_name, float hp, float hunger, float morale, float temperature)

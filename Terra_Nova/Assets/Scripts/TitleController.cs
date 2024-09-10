@@ -83,7 +83,7 @@ public class TitleController : MonoBehaviour
     public void Startbutton()
     {
         aud.AudioPlay(0);
-        SceneManager.LoadScene("ExpScene");
+        SceneManager.LoadScene("New_Game_scene");
         
     }
 

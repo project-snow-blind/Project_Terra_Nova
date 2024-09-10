@@ -7,7 +7,7 @@ using TMPro;
 public class Expedition : MonoBehaviour
 {
     public TextMeshProUGUI day, currentday, time,terrain_text,prog_persentage;
-    public Image terrain,sun,progressbar;
+    public Image terrain,sun,progressbar,checkpoint;
     public Sprite[] sprites;
     public Camera cameras;
     private int currentdays = 1, days = 1, month = 11;
@@ -17,6 +17,9 @@ public class Expedition : MonoBehaviour
     CanvasGroup Curtain;
     [SerializeField]
     GameObject BottomUI;
+
+    [SerializeField]
+    private GameObject Event_Container,General_Info_Container,Action_Container,Undo_Bookmark;
     // Start is called before the first frame update
     void Start()
     {
@@ -396,7 +399,9 @@ public class Expedition : MonoBehaviour
     private void ProgressbarUpdate()
     {
         progressbar.fillAmount = progress / 100f;
+        checkpoint.fillAmount = 1.01f - progressbar.fillAmount;
         prog_persentage.text = progress.ToString() + "%";
+        
     }
 
     [SerializeField]
@@ -576,7 +581,12 @@ public class Expedition : MonoBehaviour
         Menu_Popup.SetActive(true);
         Core.core.aud.AudioPlay(0);
     }
-
+    [SerializeField]
+    private TextMeshProUGUI Menu_Title;
+    [SerializeField]
+    private GameObject menu_1st,menu_sound;
+    [SerializeField]
+    private Slider slide1, slide2;
     public void Menu_Script(int i)
     {
         switch(i)
@@ -591,14 +601,34 @@ public class Expedition : MonoBehaviour
                 break;
 
             case 2:
+                menu_1st.SetActive(false);
+                menu_sound.SetActive(true);
+                Menu_Title.text = "소리 설정";
                 break;
 
             case 3:
+                menu_1st.SetActive(true);
+                menu_sound.SetActive(false);
+                Menu_Title.text = "메뉴";
                 break;
         }
         Core.core.aud.AudioPlay(0);
     }
 
+    public void volume_control(bool b)
+    {
+        
+        if(b==true)
+        {
+            Option_Setting_script.settings.volume_bgm = slide1.value;
+            Core.core.BGM.volumechange();
+        }
+        else
+        {
+            Option_Setting_script.settings.volume_audio = slide2.value;
+            Core.core.aud.volumechange();
+        }
+    }
     /////////////////////////이벤트
 
     //public void Createevent()
@@ -683,5 +713,8 @@ public class Expedition : MonoBehaviour
         
         Core.core.Crew_update(i, Selected_Crew);
     }
+
+
+    
 }
 

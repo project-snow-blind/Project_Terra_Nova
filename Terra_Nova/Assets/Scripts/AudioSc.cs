@@ -18,4 +18,13 @@ public class AudioSc : MonoBehaviour
     {
         DontDestroyOnLoad(transform.gameObject);
     }
+
+    public void volumechange()
+    {
+        aud.volume = Option_Setting_script.settings.volume_audio;
+    }
+    //public void bgmvolumechange()
+    //{
+    //    aud.volume = Option_Setting_script.settings.volume_bgm;
+    //}
 }
