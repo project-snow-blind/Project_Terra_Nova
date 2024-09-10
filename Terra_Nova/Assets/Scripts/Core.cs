@@ -17,8 +17,13 @@ public class Core : MonoBehaviour
     
     [SerializeField]
     private Crew_Sc[] crews;
+    //[SerializeField]
+    public Sprite[] Crew_Portrait_Set;
+    //[SerializeField]
+    public Sprite[] Unique_Crew_Portrait_Set;
     [SerializeField]
     private int crewcount = 0;
+
 
     //private List<ExpeditionCrew> Core_Crew = new List<ExpeditionCrew>();
     private void Awake()
@@ -27,7 +32,7 @@ public class Core : MonoBehaviour
         List<CREW_TRAIT> oates_list = new List<CREW_TRAIT> { CREW_TRAIT.SKI_CHAMP, CREW_TRAIT.OATES_POLAR_CAVARLY };
         List<EQUIPMENT_TRAIT> oates_list2 = new List<EQUIPMENT_TRAIT> {EQUIPMENT_TRAIT.FUR_CLOTH, EQUIPMENT_TRAIT.WOOL_CLOTH, EQUIPMENT_TRAIT.CONTAINED_SNOWMOBILE};
         List<EVENT_TRAIT> oates_list3 = new List<EVENT_TRAIT> {EVENT_TRAIT.CRITICAL_FROST_BITE, EVENT_TRAIT.EXHAUSTED};
-        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 36f, oates_list2, oates_list3, oates_list);
+        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 5, oates_list2, oates_list3, oates_list, 101);
 
         
         Crew_Add(Oates);
@@ -115,7 +120,7 @@ public class Core : MonoBehaviour
 
         List<EQUIPMENT_TRAIT> eq_list = Eq_TraitGen();
         List<CREW_TRAIT> crew_trait = Crew_TraitGen();
-        ExpeditionCrew newcrew = new ExpeditionCrew(IDpool, CREW_MOVEMENT.WALK, cloth, NameGen(), 100, 100, 100, 36f, eq_list, default, crew_trait) ;
+        ExpeditionCrew newcrew = new ExpeditionCrew(IDpool, CREW_MOVEMENT.WALK, cloth, NameGen(), 100, 100, 100, 5, eq_list, default, crew_trait) ;
 
         return newcrew;
     }
@@ -321,4 +326,9 @@ public class Core : MonoBehaviour
     {
         OnCrewChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    //public void option_popup()
+    //{
+
+    //}
 }

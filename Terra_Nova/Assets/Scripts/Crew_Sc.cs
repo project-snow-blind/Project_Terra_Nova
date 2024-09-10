@@ -20,8 +20,15 @@ public class Crew_Sc : MonoBehaviour
     [SerializeField]
     private string CREW_NAME;
     [SerializeField]
-    private float HPMAX, HP, hungerMAX, hunger, moraleMAX, morale, temperature;
+    private float HPMAX, HP, hungerMAX, hunger, moraleMAX, morale;
+    [SerializeField]
+    private int temperature;
+    [SerializeField]
+    private int Portrait;
 
+
+    //[SerializeField]
+    //int CrewPortraitSet;
     public ExpeditionCrew export;
     void Start()
     {
@@ -48,11 +55,12 @@ public class Crew_Sc : MonoBehaviour
         morale = listcrew.morale;
         moraleMAX = listcrew.moraleMAX;
         temperature = listcrew.temperature;
+        Portrait = listcrew.portrait;
     }
     
     public void Export_Crew_Const()
     {
-        ExpeditionCrew Output = new ExpeditionCrew(CREW_ID, CREW_MOVE, CREW_CLOTH, CREW_NAME, HP, hunger, morale, temperature, EQUIP_TRAIT, EVENT_TRAIT, CREW_TRAIT);
+        ExpeditionCrew Output = new ExpeditionCrew(CREW_ID, CREW_MOVE, CREW_CLOTH, CREW_NAME, HP, hunger, morale, temperature, EQUIP_TRAIT, EVENT_TRAIT, CREW_TRAIT,Portrait);
         export = Output;
     }
     

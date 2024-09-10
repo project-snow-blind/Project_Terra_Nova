@@ -3,10 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 public class Crew_UI_sc : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI names, hp, hunger, trust;
+    [SerializeField]
+    private Image Portrait,hpbar,hgbar,trustbar,tempbar;
+    [SerializeField]
+    private Sprite[] Temp;
     //public TextMeshProUGUI text2;
     //[SerializeField]
     //private GameObject PopUp;
@@ -45,9 +50,37 @@ public class Crew_UI_sc : MonoBehaviour
     {
         ExpeditionCrew crew = Core.core.Crew_Read(crewnumber);
         names.text = crew.CREW_NAME;
-        hp.text = "HP : " + crew.HP.ToString() + "/" + crew.HPMAX.ToString();
-        hunger.text = "HUN : " + crew.hunger.ToString() + "/" + crew.hungerMAX.ToString();
-        trust.text = "TRU : " + crew.morale.ToString() + "/" + crew.moraleMAX.ToString();
+
+
+        hp.text = crew.HP.ToString() + "/" + crew.HPMAX.ToString();
+        hunger.text = crew.hunger.ToString() + "/" + crew.hungerMAX.ToString();
+        trust.text = crew.morale.ToString() + "/" + crew.moraleMAX.ToString();
+
+        hpbar.fillAmount = crew.HPMAX / crew.HP;
+        hgbar.fillAmount = crew.hungerMAX / crew.hunger;
+        trustbar.fillAmount = crew.moraleMAX / crew.morale;
+        if (crew.portrait < 100)
+        {
+            Portrait.sprite = Core.core.Crew_Portrait_Set[crew.portrait];
+        }
+        else
+        {
+            Portrait.sprite = Core.core.Unique_Crew_Portrait_Set[crew.portrait - 100];
+        }
+        //Portrait_Set(crew);
+        tempbar.sprite = Temp[crew.temperature];
     }
     
+
+    //private void Portrait_Set(ExpeditionCrew crew)
+    //{
+    //    if(crew.portrait < 100)
+    //    {
+    //        Portrait.sprite = Core.core.Crew_Portrait_Set[crew.portrait];
+    //    }
+    //    else
+    //    {
+    //        Portrait.sprite = Core.core.Unique_Crew_Portrait_Set[crew.portrait - 100];
+    //    }
+    //}
 }
