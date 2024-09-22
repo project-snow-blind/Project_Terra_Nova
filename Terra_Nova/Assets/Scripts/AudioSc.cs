@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioSc : MonoBehaviour
 {
     public AudioClip[] clips;
+    [SerializeField]
     private AudioSource aud;
     public void AudioPlay(int i)
     {
@@ -19,9 +20,12 @@ public class AudioSc : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
     }
 
-    public void volumechange()
+    public void volumechange(float v)
     {
-        aud.volume = Option_Setting_script.settings.volume_audio;
+        
+        //float newvolume = Option_Setting_script.settings.volume_audio;
+        //AudioSource newaud = GetComponent<AudioSource>();
+        aud.volume = v;
     }
     //public void bgmvolumechange()
     //{

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b4b94e07dc65c1248b8c8bb5ef41dfa0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22039717d471c824aab441a6a1e5b76f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -254,14 +254,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Expedition, Assembly-CSharp
-        m_MethodName: RestingPopUpActive
-        m_Mode: 1
+      - m_Target: {fileID: 5688474659907245235}
+        m_TargetAssemblyTypeName: Action_UI_sc, Assembly-CSharp
+        m_MethodName: Actionbutton_function
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -386,14 +386,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Expedition, Assembly-CSharp
-        m_MethodName: RestingPopUpActive
-        m_Mode: 1
+      - m_Target: {fileID: 5688474659907245235}
+        m_TargetAssemblyTypeName: Action_UI_sc, Assembly-CSharp
+        m_MethodName: Actionbutton_function
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -407,6 +407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3493649705103241467}
+  - component: {fileID: 5688474659907245235}
   m_Layer: 5
   m_Name: Action_Container
   m_TagString: Untagged
@@ -428,9 +429,10 @@ RectTransform:
   m_Children:
   - {fileID: 3525516017871522989}
   - {fileID: 5803556611787949875}
-  - {fileID: 2000358852623869350}
   - {fileID: 1214890597450217331}
+  - {fileID: 2000358852623869350}
   - {fileID: 6748873306845459979}
+  - {fileID: 2920122068516150013}
   - {fileID: 1308004200486382037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -439,6 +441,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5688474659907245235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4425501211608041991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eef5b705868570468014705c6b69432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Portrait: {fileID: 3820103210878650763}
+  Advent: {fileID: 5840216511087893748}
+  Rest: {fileID: 1774417967681979186}
+  Scout: {fileID: 8744681198138333871}
+  Craft: {fileID: 5762407796109658950}
+  Check: {fileID: 8142666343414631370}
+  Name: {fileID: 993205720311818845}
+  Desc: {fileID: 4524951694181344922}
+  crewnumber: 0
+  statues: 0
 --- !u!1 &4432423485596312995
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,14 +583,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Expedition, Assembly-CSharp
-        m_MethodName: Adv_PopUP_Active
-        m_Mode: 1
+      - m_Target: {fileID: 5688474659907245235}
+        m_TargetAssemblyTypeName: Action_UI_sc, Assembly-CSharp
+        m_MethodName: Actionbutton_function
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -712,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b4b94e07dc65c1248b8c8bb5ef41dfa0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 887c978477cda2948a0203972c440734, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -766,18 +790,93 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Expedition, Assembly-CSharp
-        m_MethodName: RestingPopUpActive
-        m_Mode: 1
+      - m_Target: {fileID: 5688474659907245235}
+        m_TargetAssemblyTypeName: Action_UI_sc, Assembly-CSharp
+        m_MethodName: Actionbutton_function
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!1 &6492885001735424997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2920122068516150013}
+  - component: {fileID: 4778514260240167722}
+  - component: {fileID: 8142666343414631370}
+  m_Layer: 5
+  m_Name: Check_Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2920122068516150013
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492885001735424997}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3493649705103241467}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -320, y: 210}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4778514260240167722
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492885001735424997}
+  m_CullTransparentMesh: 1
+--- !u!114 &8142666343414631370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492885001735424997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 33131df57b005fa4692b0a03c29d23d6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7142486804036779761
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,15 +981,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pure Evil(KObaryo FTN Remix)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2ab6d82e373dc2d46a340eebeea78789, type: 2}
+  m_sharedMaterial: {fileID: 334331681509984250, guid: 2ab6d82e373dc2d46a340eebeea78789, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -907,7 +1006,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.15
+  m_fontSize: 50.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

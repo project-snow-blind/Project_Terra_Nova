@@ -4,19 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Random = UnityEngine.Random;
-
+using System.IO;
 public class Core : MonoBehaviour
 {
-    public event EventHandler OnCrewChanged;
+    public event EventHandler OnCrewChanged, OnActionChanged, On_Round_Ends, On_Day_Ends, On_Weak_Ends;
 
 
     public static Core core;
     public AudioSc aud;
     public AudioSc BGM;
-    private int IDpool = 0;
+    private int IDpool = 1;
     
-    [SerializeField]
-    private Crew_Sc[] crews;
+    //[SerializeField]
+    public Crew_Sc[] crews;
     //[SerializeField]
     public Sprite[] Crew_Portrait_Set;
     //[SerializeField]
@@ -24,30 +24,46 @@ public class Core : MonoBehaviour
     [SerializeField]
     private int crewcount = 0;
 
+    [SerializeField]
+    private List<ExpeditionCrew> Unique_Crew_Library = new List<ExpeditionCrew>();
 
+    
     //private List<ExpeditionCrew> Core_Crew = new List<ExpeditionCrew>();
     private void Awake()
     {
         core = this;
-        List<CREW_TRAIT> oates_list = new List<CREW_TRAIT> { CREW_TRAIT.SKI_CHAMP, CREW_TRAIT.OATES_POLAR_CAVARLY };
-        List<EQUIPMENT_TRAIT> oates_list2 = new List<EQUIPMENT_TRAIT> {EQUIPMENT_TRAIT.FUR_CLOTH, EQUIPMENT_TRAIT.WOOL_CLOTH, EQUIPMENT_TRAIT.CONTAINED_SNOWMOBILE};
-        List<EVENT_TRAIT> oates_list3 = new List<EVENT_TRAIT> {EVENT_TRAIT.CRITICAL_FROST_BITE, EVENT_TRAIT.EXHAUSTED};
-        ExpeditionCrew Oates = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "L. Oates", 100, 100, 100, 5, oates_list2, oates_list3, oates_list, 101);
-
         
-        Crew_Add(Oates);
+        //Crew_Add(GetCrewinfo("Lawrence Oates"));
+    }
 
-        //테스트용 구문
-        Crew_Add(Create_Crew());
-        Crew_Add(Create_Crew());
-        Crew_Add(Create_Crew());
+    private void difficulty_generate()
+    {
+        int i = Option_Setting_script.settings.difficult_output();
 
-        //ExpeditionCrew[] arr = Core_Crew.OfType<ExpeditionCrew>().ToArray();
-        //int crew_count = arr.Length;
-        //for (int i = 0; i < crew_count; i++)
-        //{
-        //    crews[crew_count].Testing_Normalize_Crew(arr[crew_count]);
-        //}
+        switch(i)
+        {
+            case 0:
+                for (i = 0; i < 4; i++)
+                    Crew_Add(Create_Crew());
+                break;
+
+            case 1:
+                for (i = 0; i < 4; i++)
+                    Crew_Add(Create_Crew());
+                break;
+
+            case 2:
+                for (i = 0; i < 4; i++)
+                    Crew_Add(Create_Crew());
+                break;
+
+            case 3:
+                Crew_Add(GetCrewinfo("Robert F. Scott"));
+                Crew_Add(GetCrewinfo("Lawrence Oates"));
+                Crew_Add(GetCrewinfo("Henry R. Bowers"));
+                Crew_Add(GetCrewinfo("Edgar Evans"));
+                break;
+        }
     }
 
     private void Start()
@@ -55,14 +71,41 @@ public class Core : MonoBehaviour
 
         //ExpeditionCrew dummy = new ExpeditionCrew(0, CREW_MOVEMENT.WALK, CREW_CLOTH.WOOL, "Dummy", 0, 0, 0, 0f);
         //Crew_Add(dummy);
-        
+
+        Unique_crew_Generator();
+        difficulty_generate();
+
+
+
+
+
         GameObject audioobj = GameObject.Find("Audio Source");
         aud = audioobj.GetComponent<AudioSc>();
         GameObject audioobj2 = GameObject.Find("BGM Source");
         BGM = audioobj2.GetComponent<AudioSc>();
         DontDestroyOnLoad(transform.gameObject);
+
+        StartCoroutine(startsetting());
     }
 
+    private IEnumerator startsetting()
+    {
+        yield return new WaitForSeconds(0.01f);
+        Crew_Statue_Changed();
+        Expedition.instance.Itemstorage_input("통조림", 200);
+        Expedition.instance.Itemstorage_input("사료", 75);
+        Expedition.instance.Itemstorage_input("비스킷", 35);
+        Expedition.instance.Itemstorage_input("홍차", 50);
+        Expedition.instance.Itemstorage_input("연료", 1000);
+        Expedition.instance.Itemstorage_input("조랑말", 10);
+        Expedition.instance.Itemstorage_input("썰매 개", 5);
+        Expedition.instance.Itemstorage_input("양모 옷", 4);
+        Expedition.instance.Itemstorage_input("카메라", 2);
+        Expedition.instance.Itemstorage_input("국기", 1);
+        Expedition.instance.Itemstorage_input("말 사료", 125);
+        Expedition.instance.Itemstorage_input("초콜릿", 8);
+
+    }
 
 
     public void Crew_Add(ExpeditionCrew newcrew)
@@ -82,6 +125,14 @@ public class Core : MonoBehaviour
         //List<ExpeditionCrew> newone = arr.OfType<ExpeditionCrew>().ToList();
         //Core_Crew = newone;
     }
+
+    public void Crew_update_export()
+    {
+        foreach(Crew_Sc crew in crews)
+        {
+            crew.Export_Crew_Const();
+        }
+    }
     public ExpeditionCrew Crew_Read(int i)
     {
         Crew_Sc dummy = crews[i];
@@ -90,6 +141,12 @@ public class Core : MonoBehaviour
         ExpeditionCrew Output = dummy.export;
 
         return Output;
+    }
+
+    public Crew_Sc Crew_Read_New(int i)
+    {
+        Crew_Sc dummy = crews[i];
+        return dummy;
     }
     public List<ExpeditionCrew> Crew_Read_All()
     {
@@ -107,20 +164,45 @@ public class Core : MonoBehaviour
         return Output;
     }
 
+    public List<Crew_Sc> Crew_Read_All_New()
+    {
+        List<Crew_Sc> Output = new List<Crew_Sc>();
+        foreach(Crew_Sc crew in crews)
+        {
+            Output.Add(crew);
+        }
+
+        return Output;
+    }
     public ExpeditionCrew Create_Crew()
     {
         IDpool++;
-        CREW_CLOTH cloth;
-        if (Random.Range(0, 1) == 0)
+        CREW_CLOTH cloth = CREW_CLOTH.WOOL2;
+        switch(Random.Range(0,5))
         {
-            cloth = CREW_CLOTH.WOOL;
+            case 0:
+                cloth = CREW_CLOTH.WOOL1;
+                break;
+            case 1:
+                cloth = CREW_CLOTH.WOOL2;
+                break;
+            case 2:
+                cloth = CREW_CLOTH.WOOL3;
+                break;
+            case 3:
+                cloth = CREW_CLOTH.FUR1;
+                break;
+            case 4:
+                cloth = CREW_CLOTH.FUR2;
+                break;
+            case 5:
+                cloth = CREW_CLOTH.FUR3;
+                break;
         }
-        else
-            cloth = CREW_CLOTH.FUR;
 
-        List<EQUIPMENT_TRAIT> eq_list = Eq_TraitGen();
-        List<CREW_TRAIT> crew_trait = Crew_TraitGen();
-        ExpeditionCrew newcrew = new ExpeditionCrew(IDpool, CREW_MOVEMENT.WALK, cloth, NameGen(), 100, 100, 100, 5, eq_list, default, crew_trait) ;
+        List<Trait_data> trait_pool = TraitGenerator();
+        ///ExpeditionCrew newcrew = new ExpeditionCrew(IDpool, CREW_MOVEMENT.WALK, cloth, NameGen(), 100, 100, 100, 5, eq_list, default, crew_trait) ;
+        ExpeditionCrew newcrew = new ExpeditionCrew(IDpool, CREW_MOVEMENT.WALK, cloth, NameGen(), 100, 100, 100, trait_pool, 5, 0) ;
 
         return newcrew;
     }
@@ -163,6 +245,59 @@ public class Core : MonoBehaviour
         "Simpson",
         "Taylor"
     };
+
+
+
+    public List<Trait_data> TraitGenerator()
+    {
+        List<Trait_data> all_pool = Trait_Library.instance.Traits;
+        List<Trait_data> temppool = new List<Trait_data>();
+        List<Trait_data> newpool = new List<Trait_data>();
+        List<Trait_data> equip = new List<Trait_data>();
+        List<Trait_data> crew = new List<Trait_data>();
+
+
+        foreach(Trait_data trait in all_pool)
+        {
+            if (!trait.unique)
+                temppool.Add(trait);
+
+        }
+
+        foreach(Trait_data trait in temppool)
+        {
+            switch (trait.categrory)
+            {
+                case trait_category.CR:
+                    crew.Add(trait);
+                    break;
+
+                case trait_category.EQ:
+                    equip.Add(trait);
+
+                    break;
+                default:
+
+                    break;
+            }
+
+        }
+
+        for(int i = 0; i < 4; i++)
+        {
+            int v = Random.Range(0, crew.Count);
+            newpool.Add(crew[v]);
+            crew.RemoveAt(v);
+        }
+        
+        for(int i = 0; i < 2; i++)
+        {
+            int v = Random.Range(0, equip.Count);
+            newpool.Add(equip[v]);
+            equip.RemoveAt(v);
+        }
+        return newpool;
+    }
 
     public List<EQUIPMENT_TRAIT> Eq_TraitGen(int count = default, int max = 2, List<EQUIPMENT_TRAIT> traitpool = default, List<EQUIPMENT_TRAIT> fixed_trait = default)
     {
@@ -239,10 +374,6 @@ public class Core : MonoBehaviour
         return OutPut;
 
     }
-    //public List<EVENT_TRAIT> Ev_TraitGen(int count = default)
-    //{
-    //    List<EventTra>
-    //}
     private List<CREW_TRAIT>normal_crew_trait_list_gen()
     {
         List<CREW_TRAIT> normal_trait_list = new List<CREW_TRAIT>();
@@ -272,63 +403,92 @@ public class Core : MonoBehaviour
         return list;
     }
 
-    public bool IDCheck(ExpeditionCrew arr, int id)
-    {
-        bool output = false;
-        if (arr.CREW_ID.Equals(id))
-        {
-            output = true;
-        }
-        return output;
-    }
-    public bool EquipCheck(ExpeditionCrew arr, EQUIPMENT_TRAIT trait)
-    {
-        bool output = false;
-        foreach (EQUIPMENT_TRAIT traits in arr.EQUIP_TRAIT)
-        {
-            if (traits.Equals(trait))
-            {
-                output = true;
-            }
-        }
-        return output;
-
-    }
-
-    public bool Ev_traitCheck(ExpeditionCrew arr, EVENT_TRAIT trait)
-    {
-        bool output = false;
-        foreach (EVENT_TRAIT traits in arr.EVENT_TRAIT)
-        {
-            if (traits.Equals(trait))
-            {
-                output = true;
-            }
-        }
-        return output;
-
-    }
-    public bool CrewTraitCheck(ExpeditionCrew arr, CREW_TRAIT trait)
-    {
-        bool output = false;
-        foreach (CREW_TRAIT traits in arr.CREW_TRAIT)
-        {
-            if (traits.Equals(trait))
-            {
-                output = true;
-            }
-        }
-        return output;
-
-    }
-
     public void Crew_Statue_Changed()
     {
         OnCrewChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    //public void option_popup()
-    //{
+    public void Action_UI_Changed()
+    {
+        OnActionChanged?.Invoke(this, EventArgs.Empty);
+    }
 
-    //}
+    public void Action_do()
+    {
+        On_Round_Ends?.Invoke(this, EventArgs.Empty);
+
+    }
+
+    public void Next_Day()
+    {
+        On_Day_Ends?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void Next_Week()
+    {
+        On_Weak_Ends?.Invoke(this, EventArgs.Empty);
+    }
+    
+    public void Unique_crew_Generator()
+    {
+        LoadCrewData();
+        foreach(Crew_data data in crew.crewdata)
+        {
+            List<Trait_data> traitlist = new List<Trait_data>();
+
+            foreach(string str in data.traits)
+            {
+                traitlist.Add(Trait_Library.instance.GetTrait(str));
+                
+            }
+
+
+            ExpeditionCrew crew = new ExpeditionCrew(data.CREW_ID, CREW_MOVEMENT.WALK, data.CREW_CLOTH, data.CREW_NAME, 100, 100, 100, traitlist, data.temperature, data.Portrait);
+            Unique_Crew_Library.Add(crew);
+        }
+    }
+
+    public ExpeditionCrew GetCrewinfo(string name)
+    {
+        return Unique_Crew_Library.Where(x => x.CREW_NAME == name).FirstOrDefault();
+    }
+
+    public Crew crew;
+
+    [ContextMenu("To Json Data")]
+    void SaveCrewData()
+    {
+        string JsonData = JsonUtility.ToJson(crew, true);
+        string path = Path.Combine(Application.dataPath + "/Resources/JsonDat/Crews", "UniqueCrewdata.json");
+        File.WriteAllText(path, JsonData);
+
+        path = Path.Combine(Application.dataPath + "/Resources/JsonDat/backup", "UniqueCrewdata.json");
+        File.WriteAllText(path, JsonData);
+    }
+
+    [ContextMenu("From Json Data")]
+    void LoadCrewData()
+    {
+        string path = Path.Combine(Application.dataPath + "/Resources/JsonDat/Crews", "UniqueCrewdata.json");
+        string jsondata = File.ReadAllText(path);
+
+        crew = JsonUtility.FromJson<Crew>(jsondata);
+    }
+}
+
+
+
+[Serializable]
+public class Crew
+{
+    public Crew_data[] crewdata;
+}
+[Serializable]
+public class Crew_data
+{
+    public int CREW_ID;
+    public CREW_CLOTH CREW_CLOTH;
+    public List<string> traits;
+    public string CREW_NAME;
+    public int temperature, Portrait;
 }

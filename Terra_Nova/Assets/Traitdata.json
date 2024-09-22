@@ -1,0 +1,13 @@
+{
+    "categrory": 1,
+    "modifiers": [],
+    "icon": {
+        "instanceID": 30870
+    },
+    "big_icon": {
+        "instanceID": 30870
+    },
+    "name": "스키 사용자",
+    "description": "이 대원은 스키를 타는 법을 배웠습니다.",
+    "unique": false
+}

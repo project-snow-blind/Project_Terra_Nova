@@ -1,0 +1,177 @@
+{
+    "Traits": [
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30644
+            },
+            "big_icon": {
+                "instanceID": 30644
+            },
+            "name": "썰매 개",
+            "description": "개썰매를 끌기 위한 개들이 배정되었습니다.\\n개썰매를 사용할 수 있습니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "스키",
+            "description": "개인용 스키를 가지고 있습니다.\\n스키와 관련된 특성이 있다면 스키 이동수단을 사용할 수 있습니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "스키(강화됨)",
+            "description": "놀라울 정도로 가볍고 빠른 스키를 가지고 있습니다.",
+            "unique": true
+        },
+        {
+            "categrory": 1,
+            "modifiers": [
+                {
+                    "statname": "speed",
+                    "value": 0.10000000149011612,
+                    "mult": false
+                }
+            ],
+            "icon": {
+                "instanceID": 0
+            },
+            "big_icon": {
+                "instanceID": 0
+            },
+            "name": "길잡이",
+            "description": "노잡이ㅣㅣㅣ",
+            "unique": false
+        },
+        {
+            "categrory": 1,
+            "modifiers": [
+                {
+                    "statname": "HPMAX",
+                    "value": 25.0,
+                    "mult": false
+                },
+                {
+                    "statname": "hungerMAX",
+                    "value": 25.0,
+                    "mult": false
+                }
+            ],
+            "icon": {
+                "instanceID": 0
+            },
+            "big_icon": {
+                "instanceID": 0
+            },
+            "name": "겨울 체질",
+            "description": "이 대원은 선천적으로 추위에 강한 것 같습니다.\\n최대 체력과 허기가 25 상승합니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "조랑말",
+            "description": "시베리아의 추위도 거뜬히 버티는 수입산 조랑말입니다.\\n조랑말 이동수단을 사용할 수 있습니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "망가진 스노모빌",
+            "description": "엔진이 모종의 이유로 망가진 스노모빌입니다. 엄청나게 무거워 이걸 짊어지고 계속 나아가긴 힘들 것 같습니다...\\n이동수단을 걷기로 고정시키고, 이동속도를 0.2배로 만듭니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "스노모빌",
+            "description": "최신 과학 기술이 접목된 설상차량입니다. 놀라울정도로 빠르네요!\\스노모빌 이동수단을 사용할 수 있습니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "여분의 양모 옷",
+            "description": "양모로 짜여진 여분의 방한복입니다.\\n방한복을 양모 옷으로 변경 가능합니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "여분의 모피 옷",
+            "description": "이누이트들의 전통복식에서 착안한 모피 방한복입니다. 굉장히 따뜻하고, 땀을 잘 흡수합니다.\\n방한복을 모피 옷으로 변경 가능합니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "편광 선글라스",
+            "description": "햇빛으로부터 눈을 보호해주는 선글라스를 착용했습니다.",
+            "unique": false
+        },
+        {
+            "categrory": 2,
+            "modifiers": [],
+            "icon": {
+                "instanceID": 30870
+            },
+            "big_icon": {
+                "instanceID": 30870
+            },
+            "name": "비상식량 보유",
+            "description": "이 대원\\n조랑말 이동수단을 사용할 수 있습니다.",
+            "unique": false
+        }
+    ]
+}

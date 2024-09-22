@@ -1,0 +1,729 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &331921535969166425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3816986258747589724}
+  - component: {fileID: 3185151741109156657}
+  m_Layer: 0
+  m_Name: Item_creater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3816986258747589724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331921535969166425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5755117, y: 0.6359389, z: -0.019251935}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3185151741109156657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331921535969166425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6765bda2549793b45bd11087b85b6ab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemdata:
+    Items:
+    - category: 0
+      icon: {fileID: 21300000, guid: 627ef14367ab75b488441cc88a47caf1, type: 3}
+      big_icon: {fileID: 21300000, guid: 627ef14367ab75b488441cc88a47caf1, type: 3}
+      name: "\uAC1C\uACE0\uAE30"
+      description: "\uC370\uB9E4\uAC1C\uB97C \uB3C4\uCD95\uD574 \uC5BB\uC740 \uAC1C\uACE0\uAE30"
+      tier: 1
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 10
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger:
+        - name: "\uB300\uC601\uC81C\uAD6D \uD574\uAD70 \uB300\uB839\uC758 \uC9C0\uD718\uB97C
+            \uBC1B\uB294 \uC911"
+          b: 1
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: ff8653738349c934ab18c8dd3cf32dfc, type: 3}
+      big_icon: {fileID: 21300000, guid: ff8653738349c934ab18c8dd3cf32dfc, type: 3}
+      name: "\uD1B5\uC870\uB9BC"
+      description: "\uC124\uBA85"
+      tier: 1
+      capacity: 250
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 20
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 2
+      icon: {fileID: 21300000, guid: 027971b373d5e52458209f0877b89113, type: 3}
+      big_icon: {fileID: 21300000, guid: 027971b373d5e52458209f0877b89113, type: 3}
+      name: "\uC5F0\uB8CC"
+      description: "\uC124\uBA85"
+      tier: 1
+      capacity: 250
+      have: 0
+      effect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 0
+      icon: {fileID: 21300000, guid: 1d2b77fe1ccd9a247b4f5d452e84c69b, type: 3}
+      big_icon: {fileID: 21300000, guid: 1d2b77fe1ccd9a247b4f5d452e84c69b, type: 3}
+      name: "\uD398\uBBF8\uCEE8"
+      description: "\uC124\uBA85"
+      tier: 3
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 50
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: aea1e7da52e735f4ea4a4723204e429a, type: 3}
+      big_icon: {fileID: 21300000, guid: aea1e7da52e735f4ea4a4723204e429a, type: 3}
+      name: "\uCD08\uCF5C\uB9BF"
+      description: "\uC124\uBA85"
+      tier: 2
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 15
+        - stat: morale
+          value: 25
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: b11e5b10577866549a4185e7862343e2, type: 3}
+      big_icon: {fileID: 21300000, guid: b11e5b10577866549a4185e7862343e2, type: 3}
+      name: "\uB9D0\uACE0\uAE30"
+      description: "\uC124\uBA85"
+      tier: 1
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 20
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: dcf4f54e1bb8f224eb46ebe718a1dfd8, type: 3}
+      big_icon: {fileID: 21300000, guid: dcf4f54e1bb8f224eb46ebe718a1dfd8, type: 3}
+      name: "\uC0AC\uB8CC"
+      description: "\uC124\uBA85"
+      tier: 1
+      capacity: 9999
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 1
+        - stat: morale
+          value: -5
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 61487c7b7e6112440833c8391c703fa8, type: 3}
+      big_icon: {fileID: 21300000, guid: 61487c7b7e6112440833c8391c703fa8, type: 3}
+      name: "\uBC14\uB2E4\uD45C\uBC94 \uACE0\uAE30"
+      description: "\uC124\uBA85"
+      tier: 2
+      capacity: 75
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 20
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 12a83cda734b5c849aeefd076bb62df1, type: 3}
+      big_icon: {fileID: 21300000, guid: 12a83cda734b5c849aeefd076bb62df1, type: 3}
+      name: "\uD638\uBC00 \uBE44\uC2A4\uD0B7"
+      description: "\uD638\uBC00 \uBE44\uC2A4\uD0B7"
+      tier: 3
+      capacity: 75
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 15
+        traiteffect:
+        - name: "\uC601\uC591\uC2E4\uC870"
+          b: 0
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 28284f84ade0c4f48b730989efe60008, type: 3}
+      big_icon: {fileID: 21300000, guid: 28284f84ade0c4f48b730989efe60008, type: 3}
+      name: "\uBE44\uC2A4\uD0B7"
+      description: "\uBC00\uAC00\uB8E8 \uBE44\uC2A4\uD0B7"
+      tier: 1
+      capacity: 75
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 15
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 7d0d9677e84f4314989cb2837da1972f, type: 3}
+      big_icon: {fileID: 21300000, guid: 7d0d9677e84f4314989cb2837da1972f, type: 3}
+      name: "\uD64D\uCC28"
+      description: "\uC774\uB534\uAC78 \uB300\uCCB4 \uC5EC\uAE30\uC5D0 \uC65C \uAC00\uC838\uC628\uAC70\uC8E0?"
+      tier: 0
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: morale
+          value: 5
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 29840545047fa334ab3c9695da7291ba, type: 3}
+      big_icon: {fileID: 21300000, guid: 29840545047fa334ab3c9695da7291ba, type: 3}
+      name: "\uD6C8\uC81C \uACE0\uAE30"
+      description: 
+      tier: 3
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 30
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 0
+      icon: {fileID: 21300000, guid: 9affbf4a49bd1df4c8d96659c2fbfb15, type: 3}
+      big_icon: {fileID: 21300000, guid: 9affbf4a49bd1df4c8d96659c2fbfb15, type: 3}
+      name: "\uB9C8\uAC00\uB9B0"
+      description: 
+      tier: 3
+      capacity: 50
+      have: 0
+      effect:
+      - stateffect:
+        - stat: hunger
+          value: 10
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 3e525b2538b7c854bbf8db9bb68d42d6, type: 3}
+      big_icon: {fileID: 21300000, guid: 3e525b2538b7c854bbf8db9bb68d42d6, type: 3}
+      name: "\uC370\uB9E4 \uAC1C"
+      description: 
+      tier: 2
+      capacity: 25
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC370\uB9E4 \uAC1C"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 94a02978e820d704496fe548fee4fad8, type: 3}
+      big_icon: {fileID: 21300000, guid: 94a02978e820d704496fe548fee4fad8, type: 3}
+      name: "\uC2A4\uD0A4"
+      description: 
+      tier: 2
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC2A4\uD0A4"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 8590c8506cd381448ace5c974ad1a498, type: 3}
+      big_icon: {fileID: 21300000, guid: 8590c8506cd381448ace5c974ad1a498, type: 3}
+      name: "\uC870\uB791\uB9D0"
+      description: 
+      tier: 1
+      capacity: 10
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC870\uB791\uB9D0"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 94a02978e820d704496fe548fee4fad8, type: 3}
+      big_icon: {fileID: 21300000, guid: 94a02978e820d704496fe548fee4fad8, type: 3}
+      name: "\uC2A4\uD0A4(\uAC15\uD654\uB428)"
+      description: 
+      tier: 0
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC2A4\uD0A4(\uAC15\uD654\uB428)"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 76ea3811bea707949b9e29eab75f705b, type: 3}
+      big_icon: {fileID: 21300000, guid: 76ea3811bea707949b9e29eab75f705b, type: 3}
+      name: "\uD3B8\uAD11 \uC120\uAE00\uB77C\uC2A4"
+      description: 
+      tier: 3
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uD3B8\uAD11 \uC120\uAE00\uB77C\uC2A4"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: dae714048f80c2f42adac72b2a15f4c8, type: 3}
+      big_icon: {fileID: 21300000, guid: dae714048f80c2f42adac72b2a15f4c8, type: 3}
+      name: "\uC2A4\uB178\uBAA8\uBE4C"
+      description: 
+      tier: 1
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC2A4\uB178\uBAA8\uBE4C"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 34b00cc3e32ef4345b2dce3e333b162d, type: 3}
+      big_icon: {fileID: 21300000, guid: 34b00cc3e32ef4345b2dce3e333b162d, type: 3}
+      name: "\uC591\uBAA8 \uC637"
+      description: 
+      tier: 1
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC5EC\uBD84\uC758 \uC591\uBAA8 \uC637"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: daddc41c289e33b4f91c027e497ac2fc, type: 3}
+      big_icon: {fileID: 21300000, guid: daddc41c289e33b4f91c027e497ac2fc, type: 3}
+      name: "\uBAA8\uD53C \uC637"
+      description: 
+      tier: 2
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uC5EC\uBD84\uC758 \uBAA8\uD53C \uC637"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: 998e29f41921e4f419735c53ec010154, type: 3}
+      big_icon: {fileID: 21300000, guid: 998e29f41921e4f419735c53ec010154, type: 3}
+      name: "\uCE74\uBA54\uB77C"
+      description: 
+      tier: 1
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uCE74\uBA54\uB77C"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 1
+      icon: {fileID: 21300000, guid: e380d5b702142ce4ea4b5d6071c4a117, type: 3}
+      big_icon: {fileID: 21300000, guid: e380d5b702142ce4ea4b5d6071c4a117, type: 3}
+      name: "\uD150\uD2B8 \uC7A5\uBE44"
+      description: 
+      tier: 3
+      capacity: 4
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect:
+        - name: "\uAC1C\uC778 \uD150\uD2B8 \uC7A5\uBE44"
+          b: 1
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 1
+    - category: 2
+      icon: {fileID: 21300000, guid: 1159684645bd1c24696c3dec80d4ccc7, type: 3}
+      big_icon: {fileID: 21300000, guid: 1159684645bd1c24696c3dec80d4ccc7, type: 3}
+      name: "\uC370\uB9E4 \uACF0"
+      description: 
+      tier: 0
+      capacity: 1
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: af4c1f7bd2326cb41bee6468c1bb0597, type: 3}
+      big_icon: {fileID: 21300000, guid: af4c1f7bd2326cb41bee6468c1bb0597, type: 3}
+      name: "\uAD6D\uAE30"
+      description: 
+      tier: 1
+      capacity: 1
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: 64d5d1cee01023a43a316378ade0ec33, type: 3}
+      big_icon: {fileID: 21300000, guid: 64d5d1cee01023a43a316378ade0ec33, type: 3}
+      name: "\uB9D0 \uBC30\uC124\uBB3C"
+      description: 
+      tier: 0
+      capacity: 9999
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: 2e8bff52524962742a4f18772d0fe4c1, type: 3}
+      big_icon: {fileID: 21300000, guid: 2e8bff52524962742a4f18772d0fe4c1, type: 3}
+      name: "\uB9D0 \uC0AC\uB8CC"
+      description: 
+      tier: 1
+      capacity: 500
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: b9ca5e1757dba1d4ab581cc47d321ea1, type: 3}
+      big_icon: {fileID: 21300000, guid: b9ca5e1757dba1d4ab581cc47d321ea1, type: 3}
+      name: "\uCD1D"
+      description: 
+      tier: 2
+      capacity: 2
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: 19f7e65a36bbdf44a86d7af7e6f8e56a, type: 3}
+      big_icon: {fileID: 21300000, guid: 19f7e65a36bbdf44a86d7af7e6f8e56a, type: 3}
+      name: "\uC791\uC0B4"
+      description: 
+      tier: 0
+      capacity: 2
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0
+    - category: 2
+      icon: {fileID: 21300000, guid: 9c0a45916723c594995192aecffb207c, type: 3}
+      big_icon: {fileID: 21300000, guid: 9c0a45916723c594995192aecffb207c, type: 3}
+      name: "\uD45C\uC2DC\uC6A9 \uAE43\uBC1C"
+      description: 
+      tier: 2
+      capacity: 20
+      have: 0
+      effect:
+      - stateffect: []
+        traiteffect: []
+      trigger:
+        stat_trigger: []
+        Trait_trigger: []
+        geograph_trigger: 
+        progress_trigger: []
+        trigger_only: 0
+        is_evening: 
+        daycheck: 
+        item_limit: []
+      activeable: 0

@@ -8,6 +8,8 @@ using TMPro;
 public class Newgame_scene_script : MonoBehaviour
 {
     [SerializeField]
+    CanvasGroup FadeCurtain;
+    [SerializeField]
     private int difficult = 0;
     [SerializeField]
     private GameObject[] diffdesc;
@@ -24,6 +26,8 @@ public class Newgame_scene_script : MonoBehaviour
     {
         GameObject audioobj = GameObject.Find("Audio Source");
         aud = audioobj.GetComponent<AudioSc>();
+        
+        
         //GameObject audioobj2 = GameObject.Find("BGM Source");
         //BGM = audioobj2.GetComponent<AudioSc>();
     }
@@ -31,7 +35,8 @@ public class Newgame_scene_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(gamestart == true)
+            FadeScreen();
     }
     public void return_to_title()
     {
@@ -43,10 +48,22 @@ public class Newgame_scene_script : MonoBehaviour
     public void Game_Start()
     {
         aud.AudioPlay(0);
-        SceneManager.LoadScene("ExpScene");
+
+        //StartCoroutine(FadeScreen());
+        gamestart = true;
+        //SceneManager.LoadScene("ExpScene");
 
     }
+    private bool gamestart = false;
+    //private float Timer = 0f;
+    //private float FadeDuration = 5f;
+    private void FadeScreen()
+    {
 
+            Option_Setting_script.settings.difficult_change(difficult);
+            SceneManager.LoadScene("ExpScene");
+        
+    }
     public void difficult_change(bool b)
     {
         if (b == true)
@@ -101,7 +118,8 @@ public class Newgame_scene_script : MonoBehaviour
         }
         else
         {
-            wipalert.SetActive(true);
+            Game_Start();
+            //wipalert.SetActive(true);
         }
         aud.AudioPlay(0);
     }
