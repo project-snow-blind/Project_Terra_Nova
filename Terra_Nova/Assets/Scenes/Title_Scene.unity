@@ -220,8 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d8394423db8534687c46be60818116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficult: 0
   volume_audio: 0
   volume_bgm: 0
+  audioslider: {fileID: 0}
+  bgmslider: {fileID: 0}
 --- !u!4 &367049267
 Transform:
   m_ObjectHideFlags: 0
@@ -381,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 8868261168037471511, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
       propertyPath: m_Name
       value: BGM Source
+      objectReference: {fileID: 0}
+    - target: {fileID: 8868261168037471511, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8868261168037471511, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -614,10 +621,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 395307004304953093, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 643518046314593971, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -663,8 +666,8 @@ PrefabInstance:
       value: Audio Source
       objectReference: {fileID: 0}
     - target: {fileID: 8868261168037471511, guid: 11d80eda9e74a90468242d742a25686f, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

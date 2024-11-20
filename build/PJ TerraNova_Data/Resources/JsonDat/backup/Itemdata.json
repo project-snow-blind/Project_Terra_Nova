@@ -1,0 +1,1187 @@
+{
+    "Items": [
+        {
+            "category": 0,
+            "path": "dogmeat",
+            "icon": {
+                "instanceID": 31484
+            },
+            "big_icon": {
+                "instanceID": 31484
+            },
+            "name": "개고기",
+            "description": "썰매개를 도축해 얻은 개고기",
+            "tier": 1,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 10.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [
+                    {
+                        "name": "대영제국 해군 대령의 지휘를 받는 중",
+                        "b": true
+                    }
+                ],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "can",
+            "icon": {
+                "instanceID": 31552
+            },
+            "big_icon": {
+                "instanceID": 31552
+            },
+            "name": "통조림",
+            "description": "설명",
+            "tier": 1,
+            "capacity": 250,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 20.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": [
+                        {
+                            "name": "연료",
+                            "stack": -1
+                        }
+                    ]
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": [
+                    {
+                        "name": "연료",
+                        "stack": 1,
+                        "b": true
+                    }
+                ]
+            },
+            "activeable": true
+        },
+        {
+            "category": 2,
+            "path": "fuel",
+            "icon": {
+                "instanceID": 31460
+            },
+            "big_icon": {
+                "instanceID": 31460
+            },
+            "name": "연료",
+            "description": "설명",
+            "tier": 1,
+            "capacity": 250,
+            "have": 0,
+            "effect": [],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 0,
+            "path": "femican",
+            "icon": {
+                "instanceID": 31540
+            },
+            "big_icon": {
+                "instanceID": 31540
+            },
+            "name": "페미컨",
+            "description": "설명",
+            "tier": 3,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 50.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "choco",
+            "icon": {
+                "instanceID": 31472
+            },
+            "big_icon": {
+                "instanceID": 31472
+            },
+            "name": "초콜릿",
+            "description": "설명",
+            "tier": 2,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 15.0
+                        },
+                        {
+                            "stat": "morale",
+                            "value": 25.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "horse_meat",
+            "icon": {
+                "instanceID": 31510
+            },
+            "big_icon": {
+                "instanceID": 31510
+            },
+            "name": "말고기",
+            "description": "설명",
+            "tier": 1,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 20.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "cheonghweseok",
+            "icon": {
+                "instanceID": 31444
+            },
+            "big_icon": {
+                "instanceID": 31444
+            },
+            "name": "사료",
+            "description": "설명",
+            "tier": 1,
+            "capacity": 9999,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 1.0
+                        },
+                        {
+                            "stat": "morale",
+                            "value": -5.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "sealion",
+            "icon": {
+                "instanceID": 31500
+            },
+            "big_icon": {
+                "instanceID": 31500
+            },
+            "name": "바다표범 고기",
+            "description": "설명",
+            "tier": 2,
+            "capacity": 75,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 20.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "biscuit_rye",
+            "icon": {
+                "instanceID": 31524
+            },
+            "big_icon": {
+                "instanceID": 31524
+            },
+            "name": "호밀 비스킷",
+            "description": "호밀 비스킷",
+            "tier": 3,
+            "capacity": 75,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 15.0
+                        }
+                    ],
+                    "traiteffect": [
+                        {
+                            "name": "영양실조",
+                            "b": false
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "biscuit_floor",
+            "icon": {
+                "instanceID": 31422
+            },
+            "big_icon": {
+                "instanceID": 31422
+            },
+            "name": "비스킷",
+            "description": "밀가루 비스킷",
+            "tier": 1,
+            "capacity": 75,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 15.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "red_tea",
+            "icon": {
+                "instanceID": 31416
+            },
+            "big_icon": {
+                "instanceID": 31416
+            },
+            "name": "홍차",
+            "description": "이딴걸 대체 여기에 왜 가져온거죠?",
+            "tier": 0,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "morale",
+                            "value": 5.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "smoked_duck",
+            "icon": {
+                "instanceID": 31536
+            },
+            "big_icon": {
+                "instanceID": 31536
+            },
+            "name": "훈제 고기",
+            "description": "",
+            "tier": 3,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 30.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 0,
+            "path": "margarine",
+            "icon": {
+                "instanceID": 31492
+            },
+            "big_icon": {
+                "instanceID": 31492
+            },
+            "name": "마가린",
+            "description": "",
+            "tier": 3,
+            "capacity": 50,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [
+                        {
+                            "stat": "hunger",
+                            "value": 10.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "husky",
+            "icon": {
+                "instanceID": 31464
+            },
+            "big_icon": {
+                "instanceID": 31464
+            },
+            "name": "썰매 개",
+            "description": "",
+            "tier": 2,
+            "capacity": 25,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "썰매 개",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "ski",
+            "icon": {
+                "instanceID": 31468
+            },
+            "big_icon": {
+                "instanceID": 31468
+            },
+            "name": "스키",
+            "description": "",
+            "tier": 2,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "스키",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "PONY",
+            "icon": {
+                "instanceID": 31496
+            },
+            "big_icon": {
+                "instanceID": 31496
+            },
+            "name": "조랑말",
+            "description": "",
+            "tier": 1,
+            "capacity": 10,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "조랑말",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "ski",
+            "icon": {
+                "instanceID": 31468
+            },
+            "big_icon": {
+                "instanceID": 31468
+            },
+            "name": "스키(강화됨)",
+            "description": "",
+            "tier": 0,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "스키(강화됨)",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "sunglass",
+            "icon": {
+                "instanceID": 31516
+            },
+            "big_icon": {
+                "instanceID": 31516
+            },
+            "name": "편광 선글라스",
+            "description": "",
+            "tier": 3,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "편광 선글라스",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "snowmobile",
+            "icon": {
+                "instanceID": 0
+            },
+            "big_icon": {
+                "instanceID": 0
+            },
+            "name": "스노모빌",
+            "description": "",
+            "tier": 1,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "스노모빌",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "wool_cloth",
+            "icon": {
+                "instanceID": 31528
+            },
+            "big_icon": {
+                "instanceID": 31528
+            },
+            "name": "양모 옷",
+            "description": "",
+            "tier": 1,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "여분의 양모 옷",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "warm_cloth",
+            "icon": {
+                "instanceID": 31452
+            },
+            "big_icon": {
+                "instanceID": 31452
+            },
+            "name": "모피 옷",
+            "description": "",
+            "tier": 2,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "여분의 모피 옷",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "camera",
+            "icon": {
+                "instanceID": 31520
+            },
+            "big_icon": {
+                "instanceID": 31520
+            },
+            "name": "카메라",
+            "description": "",
+            "tier": 1,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "카메라",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 1,
+            "path": "tent_equipment",
+            "icon": {
+                "instanceID": 31480
+            },
+            "big_icon": {
+                "instanceID": 31480
+            },
+            "name": "텐트 장비",
+            "description": "",
+            "tier": 3,
+            "capacity": 4,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "개인 텐트 장비",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": true
+        },
+        {
+            "category": 2,
+            "path": "bearhaslanded",
+            "icon": {
+                "instanceID": 31506
+            },
+            "big_icon": {
+                "instanceID": 31506
+            },
+            "name": "썰매 곰",
+            "description": "",
+            "tier": 0,
+            "capacity": 1,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "flag",
+            "icon": {
+                "instanceID": 31488
+            },
+            "big_icon": {
+                "instanceID": 31488
+            },
+            "name": "국기",
+            "description": "",
+            "tier": 1,
+            "capacity": 1,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "horse_shit",
+            "icon": {
+                "instanceID": 31476
+            },
+            "big_icon": {
+                "instanceID": 31476
+            },
+            "name": "말 배설물",
+            "description": "",
+            "tier": 0,
+            "capacity": 9999,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "horse_food",
+            "icon": {
+                "instanceID": 31436
+            },
+            "big_icon": {
+                "instanceID": 31436
+            },
+            "name": "말 사료",
+            "description": "",
+            "tier": 1,
+            "capacity": 500,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "gun",
+            "icon": {
+                "instanceID": 31426
+            },
+            "big_icon": {
+                "instanceID": 31426
+            },
+            "name": "총",
+            "description": "",
+            "tier": 2,
+            "capacity": 2,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "harpoon",
+            "icon": {
+                "instanceID": 31432
+            },
+            "big_icon": {
+                "instanceID": 31432
+            },
+            "name": "작살",
+            "description": "",
+            "tier": 0,
+            "capacity": 2,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        },
+        {
+            "category": 2,
+            "path": "checkpoint_flag",
+            "icon": {
+                "instanceID": 31532
+            },
+            "big_icon": {
+                "instanceID": 31532
+            },
+            "name": "표시용 깃발",
+            "description": "",
+            "tier": 2,
+            "capacity": 20,
+            "have": 0,
+            "effect": [
+                {
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "activeable": false
+        }
+    ]
+}

@@ -25,6 +25,15 @@ public class Item_Script : MonoBehaviour
         string jsondata = File.ReadAllText(path);
 
         itemdata = JsonUtility.FromJson<ItemData>(jsondata);
+
+
+        foreach(Item_data item in itemdata.Items)
+        {
+            //item.icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path + ".png" );
+            //item.big_icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path + ".png");
+            item.icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path);
+            item.big_icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path);
+        }
     }
 }
 
@@ -39,6 +48,7 @@ public enum item_category
 public class Item_data
 {
     public item_category category;
+    public string path;
     public Sprite icon, big_icon;
     public string name, description;
     public int tier, capacity, have;
@@ -62,4 +72,5 @@ public struct Item_effect
 {
     public List<Stat_st> stateffect;
     public List<Trait_st> traiteffect;
+    public List<Item_st> itemeffect;
 }

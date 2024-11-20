@@ -54,8 +54,9 @@ MonoBehaviour:
       - statname: hungerMAX
         value: 25
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uACA8\uC6B8 \uCCB4\uC9C8"
       description: "\uC774 \uB300\uC6D0\uC740 \uC120\uCC9C\uC801\uC73C\uB85C \uCD94\uC704\uC5D0
         \uAC15\uD55C \uAC83 \uAC19\uC2B5\uB2C8\uB2E4.<br>\uCD5C\uB300 \uCCB4\uB825\uACFC
@@ -63,8 +64,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC370\uB9E4 \uAC1C"
       description: "\uAC1C\uC370\uB9E4\uB97C \uB04C\uAE30 \uC704\uD55C \uAC1C\uB4E4\uC774
         \uBC30\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uAC1C\uC370\uB9E4\uB97C \uC0AC\uC6A9\uD560
@@ -72,8 +74,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2A4\uD0A4"
       description: "\uAC1C\uC778\uC6A9 \uC2A4\uD0A4\uB97C \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4.<br>\uC2A4\uD0A4\uC640
         \uAD00\uB828\uB41C \uD2B9\uC131\uC774 \uC788\uB2E4\uBA74 \uC2A4\uD0A4 \uC774\uB3D9\uC218\uB2E8\uC744
@@ -81,26 +84,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2A4\uD0A4(\uAC15\uD654\uB428)"
       description: "\uB180\uB77C\uC6B8 \uC815\uB3C4\uB85C \uAC00\uBCCD\uACE0 \uBE60\uB978
         \uC2A4\uD0A4\uB97C \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
       unique: 1
-    - categrory: 1
-      modifiers:
-      - statname: speed
-        value: 0.1
-        mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      name: "\uAE38\uC7A1\uC774"
-      description: "\uB178\uC7A1\uC774\u3163\u3163\u3163"
-      unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC870\uB791\uB9D0"
       description: "\uD0C0\uACE0\uB2E4\uB2D0 \uC870\uB791\uB9D0\uC774 \uBC30\uC815\uB418\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uC870\uB791\uB9D0
         \uC774\uB3D9\uC218\uB2E8\uC744 \uC0AC\uC6A9\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
@@ -110,8 +105,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.8
         mult: 1
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB9DD\uAC00\uC9C4 \uC2A4\uB178\uBAA8\uBE4C"
       description: "\uC774 \uB300\uC6D0\uC740 \uACE0\uC7A5\uB09C \uC2A4\uB178\uBAA8\uBE4C\uC744
         \uB04C\uACE0\uB2E4\uB2D9\uB2C8\uB2E4.<br>\uC774\uB3D9\uC218\uB2E8\uC744 \uAC77\uAE30\uB85C
@@ -120,8 +116,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2A4\uB178\uBAA8\uBE4C"
       description: "\uCD5C\uC2E0 \uACFC\uD559 \uAE30\uC220\uC774 \uC811\uBAA9\uB41C
         \uC124\uC0C1\uCC28\uB7C9\uC744 \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4.
@@ -130,16 +127,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC5EC\uBD84\uC758 \uC591\uBAA8 \uC637"
       description: "\uC591\uBAA8\uB85C \uC9DC\uC5EC\uC9C4 \uC5EC\uBD84\uC758 \uBC29\uD55C\uBCF5\uC785\uB2C8\uB2E4.<br>\uBC29\uD55C\uBCF5\uC744
         \uC591\uBAA8 \uC637\uC73C\uB85C \uBCC0\uACBD \uAC00\uB2A5\uD569\uB2C8\uB2E4."
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC5EC\uBD84\uC758 \uBAA8\uD53C \uC637"
       description: "\uC774\uB204\uC774\uD2B8\uB4E4\uC758 \uC804\uD1B5\uBCF5\uC2DD\uC5D0\uC11C
         \uCC29\uC548\uD55C \uBAA8\uD53C \uBC29\uD55C\uBCF5\uC785\uB2C8\uB2E4. \uAD49\uC7A5\uD788
@@ -148,16 +147,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uD3B8\uAD11 \uC120\uAE00\uB77C\uC2A4"
       description: "\uD587\uBE5B\uC73C\uB85C\uBD80\uD130 \uB208\uC744 \uBCF4\uD638\uD574\uC8FC\uB294
         \uC120\uAE00\uB77C\uC2A4\uB97C \uCC29\uC6A9\uD588\uC2B5\uB2C8\uB2E4."
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uBE44\uC0C1\uC2DD\uB7C9 \uBCF4\uC720"
       description: "\uC774 \uB300\uC6D0\uC740 \uBE44\uC0C1\uC2DC\uC5D0 \uC0AC\uC6A9\uD560
         \uC601\uC591\uAC00 \uB118\uCE58\uB294 \uBE44\uC0C1\uC2DD\uB7C9\uC744 \uC18C\uC9C0\uD558\uACE0\uC788\uC2B5\uB2C8\uB2E4.<br>\uD5C8\uAE30\uAC00
@@ -167,8 +168,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 2
       modifiers: []
-      icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
-      big_icon: {fileID: 21300000, guid: bc42531f380a38b499ac65a11beacf24, type: 3}
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uCE74\uBA54\uB77C"
       description: "\uC774 \uB300\uC6D0\uC740 \uAC1C\uC778\uC6A9 \uCE74\uBA54\uB77C\uB97C
         \uAC00\uC9C0\uACE0 \uC788\uC2B5\uB2C8\uB2E4. \uB0A8\uADF9\uC758 \uC774\uC0C9\uC801\uC778
@@ -177,15 +179,17 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2A4\uD0A4 \uC0AC\uC6A9\uC790"
       description: "\uC774 \uB300\uC6D0\uC740 \uC2A4\uD0A4\uB97C \uD0C8 \uC904 \uC555\uB2C8\uB2E4."
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2A4\uD0A4 \uCC54\uD53C\uC5B8"
       description: "\uC774 \uB300\uC6D0\uC740 \uACFC\uAC70 \uC800\uBA85\uD55C \uC2A4\uD0A4
         \uB300\uD68C\uC5D0\uC11C \uAE08\uBA54\uB2EC\uC744 \uC218\uC0C1\uD588\uB358
@@ -196,8 +200,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB178\uB974\uC6E8\uC774 \uC2A4\uD0A4 \uCC54\uD53C\uC5B8"
       description: "\uC62C\uB77C\uD504 \uBE44\uC69C\uB780\uC740 \uC138\uACC4 \uC2A4\uD0A4\uB300\uD68C
         \uCC54\uD53C\uC5B8\uC774\uC790, \uC790\uC2E0\uC758 \uC2A4\uD0A4\uB97C \uC9C1\uC811
@@ -210,8 +215,9 @@ MonoBehaviour:
       unique: 1
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB9D0 \uC0AC\uC721\uC0AC"
       description: "\uC774 \uB300\uC6D0\uC740 \uC6D0\uC815\uB300\uC758 \uC870\uB791\uB9D0\uB4E4\uC744
         \uAD00\uB9AC\uD558\uB294 \uC9C1\uCC45\uC744 \uBD80\uC5EC\uBC1B\uC558\uC2B5\uB2C8\uB2E4.<br>\uC6D0\uC815\uB300\uC6D0\uB4E4\uC774
@@ -225,8 +231,9 @@ MonoBehaviour:
       - statname: HPMAX
         value: 50
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uADF9\uC9C0\uC758 \uAE30\uC0AC"
       description: "\uB85C\uB80C\uC2A4 \uC624\uCE20\uB294 \uB300\uC601\uC81C\uAD6D
         \uC721\uAD70 \uAE30\uBCD1\uC7A5\uAD50 \uCD9C\uC2E0\uC758, \uAD49\uC7A5\uD788
@@ -241,8 +248,9 @@ MonoBehaviour:
       unique: 1
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uAC1C \uC0AC\uC721\uC0AC"
       description: "\uC774 \uB300\uC6D0\uC740 \uC6D0\uC815\uB300\uC758 \uC370\uB9E4\uAC1C\uB4E4\uC744
         \uAD00\uB9AC\uD569\uB2C8\uB2E4.<br>\uC6D0\uC815\uB300\uC6D0\uB4E4\uC774 \uAC1C\uC370\uB9E4
@@ -252,8 +260,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uACF0 \uC870\uB828\uC0AC"
       description: "\uC774\uB807\uAC8C\uAE4C\uC9C0 \uD574\uC57C\uD558\uB098 \uC2F6\uC9C0\uB9CC...
         \uC774 \uB300\uC6D0\uC740 \uBB34\uB824 \uACF0\uC744 \uB2E4\uB8F0\uC904 \uC555\uB2C8\uB2E4!<br>\uC6D0\uC815\uB300\uC6D0\uB4E4\uC774
@@ -266,8 +275,9 @@ MonoBehaviour:
       - statname: speed
         value: 0.1
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uAE38\uC7A1\uC774"
       description: "\uC774 \uB300\uC6D0\uC740 \uB208\uBC2D\uC5D0\uC11C \uADF9\uC810\uC744
         \uD5A5\uD558\uB294 \uAE38\uC744 \uC548\uB0B4\uD558\uB294 \uC5ED\uD560\uC785\uB2C8\uB2E4.<br>\uC774\uB3D9\uC18D\uB3C4\uAC00
@@ -278,8 +288,9 @@ MonoBehaviour:
       - statname: speed
         value: 0.15
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC9C0\uB098\uCE5C \uBCA0\uD14C\uB791"
       description: "\uC774 \uB300\uC6D0\uC740 \uAD49\uC7A5\uD788 \uC219\uB828\uB418\uACE0
         \uC800\uBA85\uD55C \uD0D0\uD5D8\uAC00\uC785\uB2C8\uB2E4. \uB2F9\uC2E0\uC758
@@ -290,16 +301,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC815\uBE44\uC0AC"
       description: "\uC774 \uB300\uC6D0\uC740 \uB9DD\uAC00\uC9C4 \uBB3C\uAC74\uC744
         \uACE0\uCE58\uB294\uB370\uC5D0 \uB2A5\uD569\uB2C8\uB2E4."
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC694\uB9AC\uC0AC"
       description: "\uC6D0\uC815\uC5D0 \uC694\uB9AC\uC0AC\uAC00 \uBE60\uC9C8 \uC21C
         \uC5C6\uC8E0! \uC774 \uB300\uC6D0\uC740 \uC694\uB9AC\uB97C \uD560 \uC218
@@ -307,8 +320,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC0AC\uB0E5\uAFBC"
       description: "\uC774 \uB300\uC6D0\uC740 \uC0AC\uB0E5\uAFBC \uCD9C\uC2E0\uC785\uB2C8\uB2E4.
         \uC815\uCC30 \uD589\uB3D9\uC5D0\uC11C \uD2B9\uBCC4\uD55C \uC120\uD0DD\uC9C0\uB97C
@@ -316,16 +330,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uACFC\uD559\uC790"
       description: "\uC774 \uB300\uC6D0\uC740 \uB0A8\uADF9\uC758 \uC0DD\uD0DC\uACC4\uB97C
         \uC5F0\uAD6C\uD558\uAE30 \uC704\uD574 \uB3D9\uD589\uD588\uC2B5\uB2C8\uB2E4."
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC9C0\uC9C8\uD559\uC790"
       description: "\uC774 \uB300\uC6D0\uC740 \uC9C0\uC9C8\uD559\uC790 \uCD9C\uC2E0\uC785\uB2C8\uB2E4.
         \uB0A8\uADF9\uC758 \uD5D8\uC900\uD55C \uC9C0\uD615\uC5D0 \uB300\uD574 \uC870\uC5B8\uC744
@@ -336,8 +352,9 @@ MonoBehaviour:
       - statname: HPMAX
         value: 25
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uAC15\uC778\uD55C \uCCB4\uB825"
       description: "\uC774 \uB300\uC6D0\uC740 \uCCB4\uB825\uC774 \uC88B\uC2B5\uB2C8\uB2E4.<br>\uCD5C\uB300
         \uCCB4\uB825\uC774 25 \uC99D\uAC00\uD569\uB2C8\uB2E4."
@@ -347,16 +364,18 @@ MonoBehaviour:
       - statname: HPMAX
         value: -25
         mult: 0
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC720\uB9AC\uBAB8"
       description: "\uC774 \uB300\uC6D0\uC740 \uB0A8\uB4E4\uBCF4\uB2E4 \uBAB8\uC774
         \uD5C8\uC57D\uD569\uB2C8\uB2E4.<br>\uCD5C\uB300 \uCCB4\uB825\uC774 25 \uAC10\uC18C\uD569\uB2C8\uB2E4."
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uBE60\uB978 \uD68C\uBCF5"
       description: "\uC774 \uB300\uC6D0\uC740 \uBD80\uC0C1\uC5D0\uC11C \uBE60\uB974\uAC8C
         \uD68C\uBCF5\uD558\uB294 \uCCB4\uC9C8\uC785\uB2C8\uB2E4.<br>\uB77C\uC6B4\uB4DC
@@ -364,8 +383,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uCDA9\uC131\uC2A4\uB7EC\uC6C0"
       description: "\uB2F9\uC2E0\uC744 \uAD73\uAC8C \uC2E0\uB8B0\uD558\uACE0\uC788\uB294,
         \uAD49\uC7A5\uD788 \uCDA9\uC131\uC2A4\uB7EC\uC6B4 \uB300\uC6D0\uC785\uB2C8\uB2E4.<br>\uADF8\uB294
@@ -376,8 +396,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB300\uC601\uC81C\uAD6D \uD574\uAD70 \uB300\uB839\uC758 \uC9C0\uD718\uB97C
         \uBC1B\uB294 \uC911"
       description: "\uC6B0\uB9AC\uC758 \uC870\uAD6D\uC740 \uD574\uAC00 \uC9C0\uC9C0
@@ -389,8 +410,9 @@ MonoBehaviour:
       unique: 1
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uD0C8\uC9C4"
       description: "\uC774 \uB300\uC6D0\uC740 \uD5C8\uAE30\uB85C \uC778\uD55C \uD0C8\uC9C4
         \uC0C1\uD0DC\uC785\uB2C8\uB2E4.<br>\uC804\uC9C4\uC73C\uB85C \uC18C\uBAA8\uD558\uB294
@@ -400,8 +422,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB3D9\uC0C1"
       description: "\uC774 \uB300\uC6D0\uC740 \uB3D9\uC0C1\uC744 \uC785\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uD558\uB8E8\uB9C8\uB2E4
         \uCCB4\uB825\uACFC \uC2E0\uB8B0\uB3C4\uAC00 5\uC529 \uAC10\uC18C\uD569\uB2C8\uB2E4.<br>\uD5A5\uD6C4
@@ -412,8 +435,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.25
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2EC\uD55C \uB3D9\uC0C1"
       description: "\uC774 \uB300\uC6D0\uC740 \uC2EC\uAC01\uD55C \uB3D9\uC0C1\uC744
         \uC785\uC5C8\uC2B5\uB2C8\uB2E4!<br>\uC774\uB3D9\uC18D\uB3C4\uAC00 25% \uAC10\uC18C\uD558\uACE0,
@@ -425,8 +449,9 @@ MonoBehaviour:
       - statname: speed
         value: 0.15
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uD65C\uAE30 \uB118\uCE68"
       description: "\uC774 \uB300\uC6D0\uC740 \uAE30\uC6B4\uC774 \uB118\uCE69\uB2C8\uB2E4.<br>\uC774\uB3D9\uC18D\uB3C4\uAC00
         15% \uC99D\uAC00\uD558\uACE0, \uC804\uC9C4\uC73C\uB85C \uCCB4\uB825\uC744
@@ -437,8 +462,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.5
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2E4\uC871"
       description: "\uC774 \uB300\uC6D0\uC740 \uBAA8\uC885\uC758 \uC774\uC720\uB85C
         \uB2E4\uB9AC\uB97C \uD06C\uAC8C \uB2E4\uCCE4\uC2B5\uB2C8\uB2E4.<br>\uC774\uB3D9\uC18D\uB3C4\uAC00
@@ -446,8 +472,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uBD80\uC0C1"
       description: "\uC774 \uB300\uC6D0\uC740 \uBE44\uAD50\uC801 \uD070 \uBD80\uC0C1\uC744
         \uC785\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uD558\uB8E8\uB9C8\uB2E4 \uCCB4\uB825\uC744
@@ -458,8 +485,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.99
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uCE58\uBA85\uC801 \uB1CC\uC190\uC0C1"
       description: "\"\uD798\uB4E0 \uACE0\uBE44\uB2E4. \uC5D0\uBC18\uC2A4\uAC00 \uB1CC\uB97C
         \uB2E4\uCE5C \uAC83 \uAC19\uB2E4. \uADF8\uB294 \uC644\uC804\uD788 \uBCC0\uD588\uB2E4.
@@ -471,8 +499,9 @@ MonoBehaviour:
       unique: 1
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uBD88\uB9CC"
       description: "\uC774 \uB300\uC6D0\uC740 \uD604 \uC0C1\uD669\uC5D0 \uBD88\uB9CC\uC744
         \uAC00\uC9D1\uB2C8\uB2E4.<br>\uD558\uB8E8\uB9C8\uB2E4 \uC2E0\uB8B0\uB3C4\uAC00
@@ -480,8 +509,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB9CC\uC871\uC2A4\uB7EC\uC6C0"
       description: "\uC774 \uB300\uC6D0\uC740 \uD604 \uC0C1\uD669\uC5D0 \uAF64\uB098
         \uB9CC\uC871\uD558\uACE0 \uC788\uC2B5\uB2C8\uB2E4.<br>\uB77C\uC6B4\uB4DC\uB9C8\uB2E4
@@ -492,8 +522,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.5
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC800\uCCB4\uC628\uC99D"
       description: "\uC774 \uB300\uC6D0\uC740 \uC704\uD611\uC801\uC778 \uC800\uCCB4\uC628\uC99D\uC5D0
         \uC2DC\uB2EC\uB9AC\uACE0 \uC788\uC2B5\uB2C8\uB2E4!<br>\uB77C\uC6B4\uB4DC\uB9C8\uB2E4
@@ -502,16 +533,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uD3EC\uB9CC\uAC10"
       description: "\uC774 \uB300\uC6D0\uC740 \uBC30\uAC00 \uBD80\uB985\uB2C8\uB2E4.<br>\uB77C\uC6B4\uB4DC\uB9C8\uB2E4
         \uC904\uC5B4\uB4DC\uB294 \uD5C8\uAE30\uAC00 10 \uC904\uC5B4\uB4ED\uB2C8\uB2E4."
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC637\uC774 \uCC22\uC5B4\uC9D0"
       description: "\uC774 \uB300\uC6D0\uC774 \uC785\uACE0\uC788\uB294 \uC637\uC774
         \uCC22\uC5B4\uC84C\uC2B5\uB2C8\uB2E4!<br>\uCCB4\uC628 \uAD00\uB9AC\uAC00
@@ -522,8 +555,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.3
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC124\uB9F9\uC99D"
       description: "\uC774 \uB300\uC6D0\uC740 \uC77C\uC2DC\uC801\uC73C\uB85C \uB208\uC774
         \uBA40\uC5C8\uC2B5\uB2C8\uB2E4.<br>\uC774\uB3D9\uC18D\uB3C4\uAC00 30% \uAC10\uC18C\uD558\uACE0,
@@ -531,16 +565,18 @@ MonoBehaviour:
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB354\uC704"
       description: "\uC774 \uB300\uC6D0\uC740 \uC2EC\uD55C \uB354\uC704\uB97C \uD638\uC18C\uD569\uB2C8\uB2E4.<br>\uD5A5\uD6C4
         \uACBD\uACFC\uB97C \uC9C0\uCF1C\uBD10\uC57C \uD560 \uAC83 \uAC19\uC2B5\uB2C8\uB2E4..."
       unique: 0
     - categrory: 0
       modifiers: []
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC2EC\uD55C \uB540"
       description: "\uC774 \uB300\uC6D0\uC740 \uB354\uC704\uB85C \uC778\uD574 \uB540\uC5D0
         \uC808\uC5EC \uACE0\uD1B5\uBC1B\uACE0 \uC788\uC2B5\uB2C8\uB2E4.<br>\uD558\uB8E8\uB9C8\uB2E4
@@ -551,8 +587,9 @@ MonoBehaviour:
       - statname: speed
         value: -0.25
         mult: 1
-      icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
-      big_icon: {fileID: 21300000, guid: 1a9e38489c7c9404a94bc41a20c73cab, type: 3}
+      path: event_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uC601\uC591\uC2E4\uC870"
       description: "\uC774 \uB300\uC6D0\uC740 \uC2DD\uB2E8\uC758 \uC601\uC591 \uBD88\uADE0\uD615\uC73C\uB85C
         \uACE0\uD1B5\uBC1B\uACE0 \uC788\uC2B5\uB2C8\uB2E4.<br>\uC774\uB3D9\uC18D\uB3C4\uAC00
@@ -561,8 +598,9 @@ MonoBehaviour:
       unique: 0
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uB099\uD558\uC0B0"
       description: "\uD5E8\uB9AC \uBCF4\uC6CC\uC988\uB294 \uC6D0\uB798 \uACC4\uD68D\uC5D0
         \uC5C6\uB358 \uB099\uD558\uC0B0 \uC778\uC0AC\uC785\uB2C8\uB2E4.<br>\uD0D0\uD5D8\uACFC
@@ -571,8 +609,9 @@ MonoBehaviour:
       unique: 1
     - categrory: 1
       modifiers: []
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uCE5C\uC808"
       description: "\uC774 \uB300\uC6D0\uC740 \uC131\uACA9\uC774 \uC88B\uACE0, \uC8FC\uBCC0
         \uC0AC\uB78C\uB4E4\uACFC \uBE60\uB974\uAC8C \uCE5C\uD574\uC9D1\uB2C8\uB2E4.<br>\uC77C\uC8FC\uC77C\uB9C8\uB2E4
@@ -583,9 +622,20 @@ MonoBehaviour:
       - statname: HPMAX
         value: 0.05
         mult: 1
-      icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
-      big_icon: {fileID: 21300000, guid: 76015339e7ec8e44499c7bdca01aced6, type: 3}
+      path: crew_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
       name: "\uD574\uBCD1"
       description: "\uC774 \uB300\uC6D0\uC740 \uD574\uBCD1 \uCD9C\uC2E0\uC785\uB2C8\uB2E4.<br>\uCD5C\uB300
         \uCCB4\uB825\uC774 5% \uC99D\uAC00\uD569\uB2C8\uB2E4."
+      unique: 0
+    - categrory: 2
+      modifiers: []
+      path: equip_generic
+      icon: {fileID: 0}
+      big_icon: {fileID: 0}
+      name: "\uAC1C\uC778 \uD150\uD2B8 \uC7A5\uBE44"
+      description: "\uAC1C\uC778\uC6A9 \uD150\uD2B8 \uC7A5\uBE44\uB97C \uAC00\uC9C0\uACE0
+        \uC788\uC2B5\uB2C8\uB2E4.<br>\uC804\uC9C4\uC73C\uB85C \uC783\uB294 \uCCB4\uB825\uC774
+        5 \uC904\uC5B4\uB4ED\uB2C8\uB2E4."
       unique: 0

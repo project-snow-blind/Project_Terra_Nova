@@ -1,0 +1,94 @@
+{
+    "Event_Id": "free_talk",
+    "tags": [
+        2,
+        3
+    ],
+    "Event_Picture": {
+        "instanceID": 0
+    },
+    "path": "wasteland_generic",
+    "Event_Name": "화톳가에서의 이야기",
+    "Event_Desc": "\"오늘따라 바람이 더 매섭군.\" 수염이 하얗게 언 탐험대원이 장갑 낀 손을 화롯불 앞으로 내밀며 말했다.<br>\"그러게 말입니다. 하지만 이 추위도 곧 끝나겠죠. 아마도 한달 후면 남극점에 도착할 수 있을 겁니다.\" 영국 해군 출신의 젊은 대원이 따뜻한 커피를 한 모금 마시며 대답했다.<br>\"그래, 무사히 도착해야 할 텐데... 개썰매들은 좀 어떤가?\"<br>\"다행히 모두 건강합니다. 어제 준비해둔 물개고기를 잘 먹더군요.\"<br>눈보라가 텐트를 때리는 소리가 들렸지만, 화롯가의 따스함은 그들에게 잠시나마 안락함을 선물했다.",
+    "effects": [
+        {
+            "target": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "randomtarget": false,
+            "stateffect": [],
+            "traiteffect": [],
+            "itemeffect": [],
+            "event_effect": []
+        }
+    ],
+    "event_trigger": {
+        "targetID": [],
+        "stat_trigger": [],
+        "Trait_trigger": [],
+        "geograph_trigger": [],
+        "progress_trigger": [],
+        "trigger_only": false,
+        "rest_event": true,
+        "is_evening": [],
+        "daycheck": [],
+        "item_limit": []
+    },
+    "eventchance": 1.0,
+    "fire_only_once": false,
+    "event_chance_var": [],
+    "eventoptions": [
+        {
+            "name": "지금은 그저, 여유를 가지고 푹 쉬자",
+            "desc": "모든 대원의 사기 +10",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": false,
+                    "stateffect": [
+                        {
+                            "stat": "morale",
+                            "value": 10.0
+                        }
+                    ],
+                    "traiteffect": [],
+                    "itemeffect": [],
+                    "event_effect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": false
+        }
+    ]
+}

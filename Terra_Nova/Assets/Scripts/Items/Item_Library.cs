@@ -35,42 +35,11 @@ public class Item_Library : MonoBehaviour
 
         data = JsonUtility.FromJson<ItemData>(jsonData);
 
-        //foreach (Item_data item in data.Items)
-        //{
-        //    if (item.icon == null)
-        //    {
-        //        switch (trait.categrory)
-        //        {
-        //            case trait_category.CR:
-        //                trait.icon = Backup[0];
-        //                trait.big_icon = Backup[0];
-        //                break;
-
-        //            case trait_category.EQ:
-        //                trait.icon = Backup[1];
-        //                trait.big_icon = Backup[1];
-        //                break;
-
-        //            case trait_category.EV:
-        //                trait.icon = Backup[2];
-        //                trait.big_icon = Backup[2];
-        //                break;
-        //        }
-        //    }
-
-        //}
+        foreach (Item_data item in data.Items)
+        {
+            item.icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path);
+            item.big_icon = Resources.Load<Sprite>("Sprites/Item_Icons/" + item.path);
+        }
         itemlist = data.Items;
     }
-    //[SerializeField]
-    //public List<Item_SO> items = new List<Item_SO>();
-
-    //private void Awake()
-    //{
-    //    instance = this;
-    //}
-
-    //public Item_SO GetItem(string name)
-    //{
-    //    return items.Where(x => x.Name == name).FirstOrDefault();
-    //}
 }

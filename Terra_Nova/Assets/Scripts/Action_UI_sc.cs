@@ -124,14 +124,37 @@ public class Action_UI_sc : MonoBehaviour
                 }
                 spdlist.Sort();
                 float spd = spdlist[0];
-                spd *= 10f;
+                //spd *= 10f;//임시로 수정
+                spd *= 40f;
                 Expedition.instance.ProgressFuction(spd);
 
                 List<Crew_Sc> crew_new_list = Core.core.Crew_Read_All_New();
+                Core.core.Crew_update_export();
+                Trait_data check = new Trait_data();
                 foreach (Crew_Sc crew in crew_new_list)
                 {
+                    check = Trait_Library.instance.GetTrait("개인 텐트 장비");
+                    ExpeditionCrew crew_old = crew.export;
+                    if (crew_old.Traits.Contains(check))
+                    {
+                        var += 5f;
+                    }
+
+                    check = Trait_Library.instance.GetTrait("탈진");
+                    if (crew_old.Traits.Contains(check))
+                    {
+                        var *= 2f;
+                    }
+                    check = Trait_Library.instance.GetTrait("활기 넘침");
+                    if(crew_old.Traits.Contains(check))
+                    {
+                        var = 0;
+                    }
                     crew.CrewEffect_Function(effect);
                 }
+                
+                
+                Expedition.instance.Random_event_Creator(false);
                 break;
 
             case ACTION_STATUE.REST:
@@ -142,18 +165,19 @@ public class Action_UI_sc : MonoBehaviour
                 crew.CrewEffect_Function(effect);
                 effect.stat = "morale";
                 crew.CrewEffect_Function(effect);
+                Expedition.instance.Random_event_Creator(true);
                 break;
 
             case ACTION_STATUE.SCOUT:
-
+                Expedition.instance.Event_add("정찰");
                 break;
 
             case ACTION_STATUE.CRAF:
-
+                Expedition.instance.Event_add("정비");
                 break;
         }
         statues = ACTION_STATUE.IDLE;
-        
+        Check.gameObject.SetActive(false);
     }
     private void desc_tooltip_update()
     {
@@ -175,7 +199,8 @@ public class Action_UI_sc : MonoBehaviour
                 }
                 spdlist.Sort();
                 float spd = spdlist[0];
-                spd *= 100f;
+                //spd *= 100f;
+                spd *= 40f;
                 Desc.text = "목표를 향해 앞장서서 전진함\n 예상 이동 거리 : " + spd + "%" + "\n" + "이동 후 모든 대원이 15의 피해를 받음";
                 break;
             case 2://휴식

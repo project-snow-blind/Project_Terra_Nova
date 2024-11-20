@@ -20,6 +20,8 @@ public class Trait_Library : MonoBehaviour
     public Trait_data GetTrait(string name)
     {
         Trait_data output = Traits.Where(x => x.name == name).FirstOrDefault();
+
+
         if(output.icon == null)
         {
             switch(output.categrory)
@@ -53,29 +55,36 @@ public class Trait_Library : MonoBehaviour
 
         Traitdata = JsonUtility.FromJson<TraitData>(jsonData);
 
-        foreach(Trait_data trait in Traitdata.Traits)
-        {
-            if (trait.icon == null)
-            {
-                switch (trait.categrory)
-                {
-                    case trait_category.CR:
-                        trait.icon = Backup[0];
-                        trait.big_icon = Backup[0];
-                        break;
+        //foreach(Trait_data trait in Traitdata.Traits)
+        //{
+        //    if (trait.icon == null)
+        //    {
+        //        switch (trait.categrory)
+        //        {
+        //            case trait_category.CR:
+        //                trait.icon = Backup[0];
+        //                trait.big_icon = Backup[0];
+        //                break;
 
-                    case trait_category.EQ:
-                        trait.icon = Backup[1];
-                        trait.big_icon = Backup[1];
-                        break;
+        //            case trait_category.EQ:
+        //                trait.icon = Backup[1];
+        //                trait.big_icon = Backup[1];
+        //                break;
 
-                    case trait_category.EV:
-                        trait.icon = Backup[2];
-                        trait.big_icon = Backup[2];
-                        break;
-                }
-            }
+        //            case trait_category.EV:
+        //                trait.icon = Backup[2];
+        //                trait.big_icon = Backup[2];
+        //                break;
+        //        }
+        //    }
             
+        //}
+
+        foreach (Trait_data trait in Traitdata.Traits)
+        {
+            
+            trait.icon = Resources.Load<Sprite>("Sprites/Trait_Images/" + trait.path);
+            trait.big_icon = Resources.Load<Sprite>("Sprites/Trait_Images/" + trait.path);
         }
         Traits = Traitdata.Traits;
     }

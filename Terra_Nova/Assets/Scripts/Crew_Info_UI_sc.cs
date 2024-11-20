@@ -32,7 +32,6 @@ public class Crew_Info_UI_sc : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -318,7 +317,7 @@ public class Crew_Info_UI_sc : MonoBehaviour
                     stylecontainerarr[6].SetActive(true);
                 }
             }
-            if (crew.Traits.Exists(x => x.name == "Á¶¶û¸»"))
+            if (crew.Traits.Exists(x => x.name == "Á¶¶û¸»") && Expedition.instance.storage_check("»ç·á", 2))
             {
                 if (Expedition.instance.trait_checker("¸» »çÀ°»ç") || Expedition.instance.trait_checker("±ØÁöÀÇ ±â»ç"))
                 {
@@ -326,14 +325,14 @@ public class Crew_Info_UI_sc : MonoBehaviour
                 }
             }
 
-            if (crew.Traits.Exists(x => x.name == "½ä¸Å °³"))
+            if (crew.Traits.Exists(x => x.name == "½ä¸Å °³") && Expedition.instance.storage_check("»ç·á", 1))
             {
                 if (Expedition.instance.trait_checker("°³ »çÀ°»ç"))
                 {
                     stylecontainerarr[4].SetActive(true);
                 }
             }
-            if (crew.Traits.Exists(x => x.name == "½ä¸Å °õ"))
+            if (crew.Traits.Exists(x => x.name == "½ä¸Å °õ") && Expedition.instance.storage_check("»ç·á", 5))
             {
                 if (Expedition.instance.trait_checker("°õ Á¶·Ã»ç"))
                 {
@@ -358,7 +357,8 @@ public class Crew_Info_UI_sc : MonoBehaviour
 
     public void style_change_working(int i)
     {
-
+        target_crew.Export_Crew_Const();
+        ExpeditionCrew export = target_crew.export;
         
         switch(i)
         {
@@ -384,11 +384,26 @@ public class Crew_Info_UI_sc : MonoBehaviour
                 target_crew.move_style_change(CREW_MOVEMENT.SNOWMOBILE);
                 break;
             case 7:
-                target_crew.cloth_change(CREW_CLOTH.FUR3);
+                if (export.CREW_CLOTH != CREW_CLOTH.FUR3)
+                {
+                    target_crew.cloth_change(CREW_CLOTH.FUR3);
+                    Trait_st trait = new Trait_st("¿©ºÐÀÇ ¸ðÇÇ¿Ê", false);
+                    target_crew.CrewTrait_Effect_Function(trait);
+                }
+                
                 break;
             case 8:
-                target_crew.cloth_change(CREW_CLOTH.WOOL3);
+                if(export.CREW_CLOTH != CREW_CLOTH.WOOL3)
+                {
+                    target_crew.cloth_change(CREW_CLOTH.WOOL3);
+                    Trait_st trait = new Trait_st("¿©ºÐÀÇ ¾ç¸ð¿Ê", false);
+                    target_crew.CrewTrait_Effect_Function(trait);
+                }
+                
                 break;
         }
+        UIupdate(target_crew);
+        Core.core.aud.AudioPlay(0);
+        Core.core.Crew_Statue_Changed();
     }
 }

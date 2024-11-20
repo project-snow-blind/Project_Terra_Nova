@@ -27,6 +27,10 @@ public class TitleController : MonoBehaviour
     [SerializeField]
     AudioSc aud;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     // Update is called once per frame
     void Update()
@@ -82,6 +86,7 @@ public class TitleController : MonoBehaviour
 
     public void Startbutton()
     {
+
         aud.AudioPlay(0);
         SceneManager.LoadScene("New_Game_scene");
         

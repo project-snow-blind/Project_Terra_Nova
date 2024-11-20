@@ -1,0 +1,166 @@
+{
+    "Event_Id": "crevasse",
+    "tags": [
+        2,
+        3
+    ],
+    "Event_Picture": {
+        "instanceID": 0
+    },
+    "path": "wasteland_generic",
+    "Event_Name": "크레바스",
+    "Event_Desc": "\"세시간동안 쉬지 않고 갔는데 이번에는 악성 크레바스 지대가 나타났다. 가면 갈수록 상황은 악화되었다.\"<br>앞을 향해 발을 내딛자 얼음바닥이 갑자기 푹 파이더니, 그대로 구멍이 뚫려버렸다! 갈라진 틈 사이로 검푸른, 끝을 알 수 없는 공허가 보인다.",
+    "effects": [
+        {
+            "target": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "randomtarget": false,
+            "stateffect": [
+                {
+                    "stat": "HP",
+                    "value": -5.0
+                }
+            ],
+            "traiteffect": [],
+            "itemeffect": [],
+            "event_effect": []
+        }
+    ],
+    "event_trigger": {
+        "targetID": [],
+        "stat_trigger": [],
+        "Trait_trigger": [],
+        "geograph_trigger": [],
+        "progress_trigger": [],
+        "trigger_only": false,
+        "rest_event": false,
+        "is_evening": [],
+        "daycheck": [],
+        "item_limit": []
+    },
+    "eventchance": 1.0,
+    "fire_only_once": false,
+    "event_chance_var": [
+        {
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [
+                    5,
+                    2
+                ],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "value": 5.0
+        }
+    ],
+    "eventoptions": [
+        {
+            "name": "대원중 한명이 구멍에 걸려 넘어진 충격으로 다리를 접질렀다",
+            "desc": "무작위 대원에게 \"실족\" 부여",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [
+                            {
+                                "name": "실족",
+                                "b": false
+                            }
+                        ],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": true,
+                    "stateffect": [],
+                    "traiteffect": [
+                        {
+                            "name": "실족",
+                            "b": true
+                        }
+                    ],
+                    "itemeffect": [],
+                    "event_effect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": false
+        },
+        {
+            "name": "<color=#008DEA>(지질학자)이 부근에서는 자주 있는 일이기에, 크게 다친 대원은 없는 듯 하다.</color>",
+            "desc": "(아무 일도 발생하지 않음)",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": false,
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": [],
+                    "event_effect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [
+                    {
+                        "name": "지질학자",
+                        "b": true
+                    }
+                ],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": true
+        }
+    ]
+}

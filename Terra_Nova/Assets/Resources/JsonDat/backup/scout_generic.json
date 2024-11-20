@@ -1,0 +1,113 @@
+{
+    "Event_Id": "scout_generic",
+    "tags": [
+        8
+    ],
+    "Event_Picture": {
+        "instanceID": 0
+    },
+    "path": "wasteland_generic",
+    "Event_Name": "정찰",
+    "Event_Desc": "\"가도 가도 펼쳐진 하얀 빙원을 끝없이 행군하는 것은 끔찍하게 음산한 일이다.\"<br>효율적인 행군을 위해, 주변을 가볍게 정찰하며 자유 시간을 갖기로 했다. 유용한 것을 찾아내거나, 알아낼 수 있다면 좋은 일이다.",
+    "effects": [],
+    "event_trigger": {
+        "targetID": [],
+        "stat_trigger": [],
+        "Trait_trigger": [],
+        "geograph_trigger": [],
+        "progress_trigger": [],
+        "trigger_only": true,
+        "rest_event": false,
+        "is_evening": [],
+        "daycheck": [],
+        "item_limit": []
+    },
+    "eventchance": 0.0,
+    "fire_only_once": false,
+    "event_chance_var": [],
+    "eventoptions": [
+        {
+            "name": "그저 주변을 둘러보며 흥미로운 것들을 찾기로 한다.",
+            "desc": "",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": false,
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": [],
+                    "event_effect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": false
+        },
+        {
+            "name": "<color=#008DEA>사냥</color>",
+            "desc": "후속 이벤트 발생",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": false,
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": [],
+                    "event_effect": [
+                        "사냥"
+                    ]
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [
+                    {
+                        "name": "사냥꾼",
+                        "b": true
+                    }
+                ],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": true
+        }
+    ]
+}

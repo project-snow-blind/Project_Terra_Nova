@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/New_Game_scene.unity
     guid: 28b8b6a58c0ff7c42846e1a6a63cf112
+  - enabled: 1
+    path: Assets/Scenes/Credit_fail_scene.unity
+    guid: a314eb189116cfd4db1d27771be349be
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: dcc6e172a9c5b9147b4789be5afb1179, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 4e16d0fe831491b41bdeedddf01d5fa9, type: 2}

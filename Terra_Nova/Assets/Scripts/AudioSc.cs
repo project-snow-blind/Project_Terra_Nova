@@ -27,6 +27,11 @@ public class AudioSc : MonoBehaviour
         //AudioSource newaud = GetComponent<AudioSource>();
         aud.volume = v;
     }
+
+    public void stopsound()
+    {
+        aud.Pause();
+    }
     //public void bgmvolumechange()
     //{
     //    aud.volume = Option_Setting_script.settings.volume_bgm;

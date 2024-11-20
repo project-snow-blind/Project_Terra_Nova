@@ -35,7 +35,7 @@ public class Trait_data
     public trait_category categrory;
 
     public List<Modifier> modifiers = new List<Modifier>();
-
+    public string path;
     public Sprite icon, big_icon;
     public string name, description;
     public bool unique;

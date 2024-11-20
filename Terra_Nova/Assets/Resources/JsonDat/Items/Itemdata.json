@@ -2,14 +2,15 @@
     "Items": [
         {
             "category": 0,
+            "path": "dogmeat",
             "icon": {
-                "instanceID": 31052
+                "instanceID": 583458
             },
             "big_icon": {
-                "instanceID": 31052
+                "instanceID": 583458
             },
             "name": "개고기",
-            "description": "썰매개를 도축해 얻은 개고기",
+            "description": "썰매개를 도축해 얻은 개고기<br>허기 +10",
             "tier": 1,
             "capacity": 50,
             "have": 0,
@@ -21,7 +22,8 @@
                             "value": 10.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -43,14 +45,15 @@
         },
         {
             "category": 0,
+            "path": "can",
             "icon": {
-                "instanceID": 30876
+                "instanceID": 583434
             },
             "big_icon": {
-                "instanceID": 30876
+                "instanceID": 583434
             },
             "name": "통조림",
-            "description": "설명",
+            "description": "통으로 단단하게 밀봉된, 보존성 좋은 통조림<br>허기 +20<br>사용 시 연료 1개 소모",
             "tier": 1,
             "capacity": 250,
             "have": 0,
@@ -62,7 +65,13 @@
                             "value": 20.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": [
+                        {
+                            "name": "연료",
+                            "stack": -1
+                        }
+                    ]
                 }
             ],
             "trigger": {
@@ -73,20 +82,27 @@
                 "trigger_only": false,
                 "is_evening": [],
                 "daycheck": [],
-                "item_limit": []
+                "item_limit": [
+                    {
+                        "name": "연료",
+                        "stack": 1,
+                        "b": true
+                    }
+                ]
             },
             "activeable": true
         },
         {
             "category": 2,
+            "path": "fuel",
             "icon": {
-                "instanceID": 30984
+                "instanceID": 583476
             },
             "big_icon": {
-                "instanceID": 30984
+                "instanceID": 583476
             },
             "name": "연료",
-            "description": "설명",
+            "description": "불을 지피기 위해 공수해온 연료<br>추위에 취약하다.",
             "tier": 1,
             "capacity": 250,
             "have": 0,
@@ -105,14 +121,15 @@
         },
         {
             "category": 0,
+            "path": "femican",
             "icon": {
-                "instanceID": 30962
+                "instanceID": 583464
             },
             "big_icon": {
-                "instanceID": 30962
+                "instanceID": 583464
             },
             "name": "페미컨",
-            "description": "설명",
+            "description": "고기와 곡물의 가루를 모아 뭉친 영양만점 보존식<br>허기 +50",
             "tier": 3,
             "capacity": 50,
             "have": 0,
@@ -124,7 +141,8 @@
                             "value": 50.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -141,14 +159,15 @@
         },
         {
             "category": 0,
+            "path": "choco",
             "icon": {
-                "instanceID": 31054
+                "instanceID": 583452
             },
             "big_icon": {
-                "instanceID": 31054
+                "instanceID": 583452
             },
             "name": "초콜릿",
-            "description": "설명",
+            "description": "유럽산 초콜릿, 단 맛이 유독 강하다.<br>허기 +15<br>신뢰도 +25",
             "tier": 2,
             "capacity": 50,
             "have": 0,
@@ -164,7 +183,8 @@
                             "value": 25.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -181,14 +201,15 @@
         },
         {
             "category": 0,
+            "path": "horse_meat",
             "icon": {
-                "instanceID": 74514
+                "instanceID": 583500
             },
             "big_icon": {
-                "instanceID": 74514
+                "instanceID": 583500
             },
             "name": "말고기",
-            "description": "설명",
+            "description": "말을 도축해 얻은 고기<br>허기 +20",
             "tier": 1,
             "capacity": 50,
             "have": 0,
@@ -200,7 +221,8 @@
                             "value": 20.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -217,14 +239,15 @@
         },
         {
             "category": 0,
+            "path": "cheonghweseok",
             "icon": {
-                "instanceID": 74512
+                "instanceID": 583446
             },
             "big_icon": {
-                "instanceID": 74512
+                "instanceID": 583446
             },
             "name": "사료",
-            "description": "설명",
+            "description": "동물들을 위해 준비한 먹이<br>사람이 먹을게 못 되지만, 필요하다면 이거라도 먹어야 살 수 있다.<br>허기 +1<br>신뢰도 -5",
             "tier": 1,
             "capacity": 9999,
             "have": 0,
@@ -240,7 +263,8 @@
                             "value": -5.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -257,14 +281,15 @@
         },
         {
             "category": 0,
+            "path": "sealion",
             "icon": {
-                "instanceID": 74522
+                "instanceID": 583530
             },
             "big_icon": {
-                "instanceID": 74522
+                "instanceID": 583530
             },
             "name": "바다표범 고기",
-            "description": "설명",
+            "description": "바다표범을 사냥해 얻어낸 고기<br>극지대의 혹독한 환경에서는, 그 어떤 동식물도 발견하기가 쉽지 않다. 바다표범은 몇 안되는 예외 사례다.<br>허기 +20",
             "tier": 2,
             "capacity": 75,
             "have": 0,
@@ -276,7 +301,8 @@
                             "value": 20.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -293,14 +319,15 @@
         },
         {
             "category": 0,
+            "path": "biscuit_rye",
             "icon": {
-                "instanceID": 31048
+                "instanceID": 583422
             },
             "big_icon": {
-                "instanceID": 31048
+                "instanceID": 583422
             },
             "name": "호밀 비스킷",
-            "description": "호밀 비스킷",
+            "description": "호밀로 만든 비스킷<br>비스킷은 역사적으로 가장 오래된 보존식품 중 하나다.<br>잡곡을 사용하면 식감은 떨어질 수 있지만, 풍부한 비타민이 각기병을 예방해준다.<br>허기 +15",
             "tier": 3,
             "capacity": 75,
             "have": 0,
@@ -317,7 +344,8 @@
                             "name": "영양실조",
                             "b": false
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -334,14 +362,15 @@
         },
         {
             "category": 0,
+            "path": "biscuit_floor",
             "icon": {
-                "instanceID": 74508
+                "instanceID": 583416
             },
             "big_icon": {
-                "instanceID": 74508
+                "instanceID": 583416
             },
             "name": "비스킷",
-            "description": "밀가루 비스킷",
+            "description": "고운 밀가루로 만든 비스킷<br>비스킷은 역사적으로 가장 오래된 보존식품 중 하나다.<br>두번 구워 바싹 건조시키는 특유의 제빵 과정으로 인해 보존성은 매우 뛰어나지만, 식감은 별로다.<br>이건 고운 밀가루를 사용해 식감을 개선하여 먹기 편하다.<br> 허기 +15",
             "tier": 1,
             "capacity": 75,
             "have": 0,
@@ -353,7 +382,8 @@
                             "value": 15.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -370,14 +400,15 @@
         },
         {
             "category": 0,
+            "path": "red_tea",
             "icon": {
-                "instanceID": 74520
+                "instanceID": 583524
             },
             "big_icon": {
-                "instanceID": 74520
+                "instanceID": 583524
             },
             "name": "홍차",
-            "description": "이딴걸 대체 여기에 왜 가져온거죠?",
+            "description": "영국 신사의 필수품<br>브렉퍼스트와 비교해도 맛이 굉장히 강하다.<br>신뢰도 +5<br>사용 시 연료 1개 소모",
             "tier": 0,
             "capacity": 50,
             "have": 0,
@@ -389,7 +420,8 @@
                             "value": 5.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -406,14 +438,15 @@
         },
         {
             "category": 0,
+            "path": "smoked_duck",
             "icon": {
-                "instanceID": 74526
+                "instanceID": 583542
             },
             "big_icon": {
-                "instanceID": 74526
+                "instanceID": 583542
             },
             "name": "훈제 고기",
-            "description": "",
+            "description": "훈연을 통해 보존기간을 늘린 고기<br>맛있는데 영양가도 풍부하다.<br>허기 +30",
             "tier": 3,
             "capacity": 50,
             "have": 0,
@@ -425,7 +458,8 @@
                             "value": 30.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -442,14 +476,15 @@
         },
         {
             "category": 0,
+            "path": "margarine",
             "icon": {
-                "instanceID": 74516
+                "instanceID": 583518
             },
             "big_icon": {
-                "instanceID": 74516
+                "instanceID": 583518
             },
             "name": "마가린",
-            "description": "",
+            "description": "식물성 기름으로 만든 버터<br>그냥 버터와 맛은 전혀 다르지만, 똑같이 기름지고 열량이 높다.<br>허기 +10",
             "tier": 3,
             "capacity": 50,
             "have": 0,
@@ -461,7 +496,8 @@
                             "value": 10.0
                         }
                     ],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -478,14 +514,15 @@
         },
         {
             "category": 1,
+            "path": "husky",
             "icon": {
-                "instanceID": 30988
+                "instanceID": 583512
             },
             "big_icon": {
-                "instanceID": 30988
+                "instanceID": 583512
             },
             "name": "썰매 개",
-            "description": "",
+            "description": "그린란드, 시베리아 등지에서 공수해온 썰매개<br>남극의 추위를 거뜬히 견딜 수 있다.<br>매 라운드 종료마다 보유한 썰매 개 하나당 사료를 1개 소모함<br>사용 시 해당 대원에게 \"썰매 개\" 특성을 부여",
             "tier": 2,
             "capacity": 25,
             "have": 0,
@@ -497,7 +534,8 @@
                             "name": "썰매 개",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -514,14 +552,15 @@
         },
         {
             "category": 1,
+            "path": "ski",
             "icon": {
-                "instanceID": 74524
+                "instanceID": 583536
             },
             "big_icon": {
-                "instanceID": 74524
+                "instanceID": 583536
             },
             "name": "스키",
-            "description": "",
+            "description": "눈밭에서 매끄럽게 움직이는 스키<br>사용 시 해당 대원에게 \"스키\" 특성을 부여",
             "tier": 2,
             "capacity": 4,
             "have": 0,
@@ -533,7 +572,8 @@
                             "name": "스키",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -550,14 +590,15 @@
         },
         {
             "category": 1,
+            "path": "PONY",
             "icon": {
-                "instanceID": 74518
+                "instanceID": 583404
             },
             "big_icon": {
-                "instanceID": 74518
+                "instanceID": 583404
             },
             "name": "조랑말",
-            "description": "",
+            "description": "시베리아 야쿠츠크에서 조달한 야생마<br>스코틀랜드 북부의 추위를 견뎌낼만큼 강하다.<br>매 라운드 종료마다 보유한 조랑말 하나당 말 사료를 2개 소모함<br>사용 시 해당 대원에게 \"조랑말\" 특성을 부여",
             "tier": 1,
             "capacity": 10,
             "have": 0,
@@ -569,7 +610,8 @@
                             "name": "조랑말",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -586,14 +628,15 @@
         },
         {
             "category": 1,
+            "path": "ski",
             "icon": {
-                "instanceID": 74524
+                "instanceID": 583536
             },
             "big_icon": {
-                "instanceID": 74524
+                "instanceID": 583536
             },
             "name": "스키(강화됨)",
-            "description": "",
+            "description": "특별한 개조를 거친 스키<br>무게가 절반은 줄어든 느낌인데 더 튼튼하다!<br>사용 시 해당 대원에게 \"스키 강화됨\" 특성 부여",
             "tier": 0,
             "capacity": 4,
             "have": 0,
@@ -605,7 +648,8 @@
                             "name": "스키(강화됨)",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -622,14 +666,15 @@
         },
         {
             "category": 1,
+            "path": "sunglass",
             "icon": {
-                "instanceID": 74530
+                "instanceID": 583554
             },
             "big_icon": {
-                "instanceID": 74530
+                "instanceID": 583554
             },
             "name": "편광 선글라스",
-            "description": "",
+            "description": "눈밭에 반사된 자외선을 막아주는 특제 선글라스<br>이누이트 부족의 자문을 듣고 만들었다.<br>사용 시 해당 대원에게 \"편광 선글라스\" 특성 부여",
             "tier": 3,
             "capacity": 4,
             "have": 0,
@@ -641,7 +686,8 @@
                             "name": "편광 선글라스",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -658,14 +704,15 @@
         },
         {
             "category": 1,
+            "path": "snow_mobile",
             "icon": {
-                "instanceID": 74528
+                "instanceID": 0
             },
             "big_icon": {
-                "instanceID": 74528
+                "instanceID": 0
             },
             "name": "스노모빌",
-            "description": "",
+            "description": "영국에서 협찬받은 최신문물, 문명의 이기<br>사용 시 해당 대원에게 \"스노모빌\" 특성 부여",
             "tier": 1,
             "capacity": 4,
             "have": 0,
@@ -677,7 +724,8 @@
                             "name": "스노모빌",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -694,14 +742,15 @@
         },
         {
             "category": 1,
+            "path": "wool_cloth",
             "icon": {
-                "instanceID": 31808
+                "instanceID": 583572
             },
             "big_icon": {
-                "instanceID": 31808
+                "instanceID": 583572
             },
             "name": "양모 옷",
-            "description": "",
+            "description": "영국제 버버리 방한복<br>사용 시 해당 대원에게 \"여분의 양모 옷\" 특성 부여",
             "tier": 1,
             "capacity": 4,
             "have": 0,
@@ -713,7 +762,8 @@
                             "name": "여분의 양모 옷",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -730,14 +780,15 @@
         },
         {
             "category": 1,
+            "path": "warm_cloth",
             "icon": {
-                "instanceID": 74534
+                "instanceID": 583566
             },
             "big_icon": {
-                "instanceID": 74534
+                "instanceID": 583566
             },
             "name": "모피 옷",
-            "description": "",
+            "description": "이누이트족의 전통복에서 착안한 모피방한복<br>굉장히 따뜻한데 발수성이 좋아 땀이 스며들지 않아서 쾌적하다<br>사용 시 해당 대원에게 \"여분의 모피 옷\" 특성 부여 ",
             "tier": 2,
             "capacity": 4,
             "have": 0,
@@ -749,7 +800,8 @@
                             "name": "여분의 모피 옷",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -766,14 +818,15 @@
         },
         {
             "category": 1,
+            "path": "camera",
             "icon": {
-                "instanceID": 30960
+                "instanceID": 583428
             },
             "big_icon": {
-                "instanceID": 30960
+                "instanceID": 583428
             },
             "name": "카메라",
-            "description": "",
+            "description": "유럽제 카메라<br>이 신비의 땅에서 많은걸 담아갈 수 있으리라 기대한다<br>사용 시 해당 대원에게 \"카메라\" 특성 부여",
             "tier": 1,
             "capacity": 4,
             "have": 0,
@@ -785,7 +838,8 @@
                             "name": "카메라",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -802,14 +856,15 @@
         },
         {
             "category": 1,
+            "path": "tent_equipment",
             "icon": {
-                "instanceID": 74532
+                "instanceID": 583560
             },
             "big_icon": {
-                "instanceID": 74532
+                "instanceID": 583560
             },
             "name": "텐트 장비",
-            "description": "",
+            "description": "개인용 텐트 장비<br>이런 장기간 야영에 유용할 것이다.<br>사용 시 해당 대원에게 \"개인 텐트 장비\" 특성 부여",
             "tier": 3,
             "capacity": 4,
             "have": 0,
@@ -821,7 +876,8 @@
                             "name": "개인 텐트 장비",
                             "b": true
                         }
-                    ]
+                    ],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -838,21 +894,23 @@
         },
         {
             "category": 2,
+            "path": "bearhaslanded",
             "icon": {
-                "instanceID": 31812
+                "instanceID": 583410
             },
             "big_icon": {
-                "instanceID": 31812
+                "instanceID": 583410
             },
             "name": "썰매 곰",
-            "description": "",
+            "description": "흉폭하고 강력한 러시아산 불곰<br>이 녀석에게 썰매를 끌게 할 수만 있다면 속도는 스노모빌 못지 않다!<br>정말 미친 생각이지만 시도해볼만 하다....",
             "tier": 0,
             "capacity": 1,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -869,21 +927,23 @@
         },
         {
             "category": 2,
+            "path": "flag",
             "icon": {
-                "instanceID": 30856
+                "instanceID": 583470
             },
             "big_icon": {
-                "instanceID": 30856
+                "instanceID": 583470
             },
             "name": "국기",
-            "description": "",
+            "description": "정복의 상징, 극점에 꽂아야할 물건",
             "tier": 1,
             "capacity": 1,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -900,21 +960,23 @@
         },
         {
             "category": 2,
+            "path": "horse_shit",
             "icon": {
-                "instanceID": 30896
+                "instanceID": 583506
             },
             "big_icon": {
-                "instanceID": 30896
+                "instanceID": 583506
             },
             "name": "말 배설물",
-            "description": "",
+            "description": "데려온 조랑말들의 똥을 모아둔 것<br>아마 비상상황에서 연료 대용으로 사용할 수 있을지도 모르겠다.",
             "tier": 0,
             "capacity": 9999,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -931,21 +993,23 @@
         },
         {
             "category": 2,
+            "path": "horse_food",
             "icon": {
-                "instanceID": 30864
+                "instanceID": 583494
             },
             "big_icon": {
-                "instanceID": 30864
+                "instanceID": 583494
             },
             "name": "말 사료",
-            "description": "",
+            "description": "말들을 위해 준비된 건초더미<br>말은 식성이 우리 원정대의 어떤 생물과도 다르다. 말에게는 건초더미만 먹일 수 있다.",
             "tier": 1,
             "capacity": 500,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -962,21 +1026,23 @@
         },
         {
             "category": 2,
+            "path": "gun",
             "icon": {
-                "instanceID": 31050
+                "instanceID": 583482
             },
             "big_icon": {
-                "instanceID": 31050
+                "instanceID": 583482
             },
             "name": "총",
-            "description": "",
+            "description": "혹시모를 상황에 대비해 가져온 것",
             "tier": 2,
             "capacity": 2,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -993,21 +1059,23 @@
         },
         {
             "category": 2,
+            "path": "harpoon",
             "icon": {
-                "instanceID": 30958
+                "instanceID": 583488
             },
             "big_icon": {
-                "instanceID": 30958
+                "instanceID": 583488
             },
             "name": "작살",
-            "description": "",
+            "description": "사냥에 유용한 특제 작살",
             "tier": 0,
             "capacity": 2,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {
@@ -1024,21 +1092,23 @@
         },
         {
             "category": 2,
+            "path": "checkpoint_flag",
             "icon": {
-                "instanceID": 74510
+                "instanceID": 583440
             },
             "big_icon": {
-                "instanceID": 74510
+                "instanceID": 583440
             },
             "name": "표시용 깃발",
-            "description": "",
+            "description": "구간마다 꽂아 길을 표시할 작은 깃발<br>위대한 탐험가는 원정을 성공시킨 탐험가가 아니라, 모든 인원을 무사히 지켜내 돌아온 탐험가다.",
             "tier": 2,
             "capacity": 20,
             "have": 0,
             "effect": [
                 {
                     "stateffect": [],
-                    "traiteffect": []
+                    "traiteffect": [],
+                    "itemeffect": []
                 }
             ],
             "trigger": {

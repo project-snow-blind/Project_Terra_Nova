@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 using System.IO;
 public class Core : MonoBehaviour
 {
-    public event EventHandler OnCrewChanged, OnActionChanged, On_Round_Ends, On_Day_Ends, On_Weak_Ends;
+    public event EventHandler OnCrewChanged, OnActionChanged, On_Round_Ends,On_Round_Ends_2, On_Day_Ends, On_Weak_Ends;
 
 
     public static Core core;
@@ -92,22 +92,53 @@ public class Core : MonoBehaviour
     {
         yield return new WaitForSeconds(0.01f);
         Crew_Statue_Changed();
-        Expedition.instance.Itemstorage_input("통조림", 200);
-        Expedition.instance.Itemstorage_input("사료", 75);
-        Expedition.instance.Itemstorage_input("비스킷", 35);
-        Expedition.instance.Itemstorage_input("홍차", 50);
-        Expedition.instance.Itemstorage_input("연료", 1000);
-        Expedition.instance.Itemstorage_input("조랑말", 10);
-        Expedition.instance.Itemstorage_input("썰매 개", 5);
-        Expedition.instance.Itemstorage_input("양모 옷", 4);
-        Expedition.instance.Itemstorage_input("카메라", 2);
-        Expedition.instance.Itemstorage_input("국기", 1);
-        Expedition.instance.Itemstorage_input("말 사료", 125);
-        Expedition.instance.Itemstorage_input("초콜릿", 8);
+
+        int i = Option_Setting_script.settings.difficult_output();
+
+        switch (i)
+        {
+            case 0:
+                ttempbbang();
+                break;
+
+            case 1:
+                ttempbbang();
+                break;
+
+            case 2:
+                ttempbbang();
+                break;
+
+            case 3:
+                Expedition.instance.Itemstorage_input("통조림", 200);
+                Expedition.instance.Itemstorage_input("사료", 75);
+                Expedition.instance.Itemstorage_input("비스킷", 35);
+                Expedition.instance.Itemstorage_input("홍차", 50);
+                Expedition.instance.Itemstorage_input("연료", 1000);
+                Expedition.instance.Itemstorage_input("조랑말", 10);
+                Expedition.instance.Itemstorage_input("썰매 개", 5);
+                Expedition.instance.Itemstorage_input("양모 옷", 4);
+                Expedition.instance.Itemstorage_input("카메라", 2);
+                Expedition.instance.Itemstorage_input("국기", 1);
+                Expedition.instance.Itemstorage_input("말 사료", 125);
+                Expedition.instance.Itemstorage_input("초콜릿", 8);
+                break;
+        }
+        
+
+
+        
 
     }
 
-
+    private void ttempbbang()
+    {
+        List<Item_data> temp = Item_Library.instance.itemlist;
+        foreach(Item_data temp2 in temp)
+        {
+            Expedition.instance.Itemstorage_input(temp2.name, 1);
+        }
+    }
     public void Crew_Add(ExpeditionCrew newcrew)
     {
         //Core_Crew.Add(newcrew);
@@ -126,6 +157,54 @@ public class Core : MonoBehaviour
         //Core_Crew = newone;
     }
 
+    public void Crew_effect_to_all(Stat_st st)
+    {
+        foreach(Crew_Sc crew in crews)
+        {
+            crew.CrewEffect_Function(st);
+        }
+    }
+    public void Crew_reset(int i)
+    {
+        //Crew_update_export();
+        //List<ExpeditionCrew> templist = new List<ExpeditionCrew>();
+        //foreach(Crew_Sc crew in crews)
+        //{
+        //    templist.Add(crew.export);
+        //}
+        //for(int j = 0; j < templist.Count; j++)
+        //{
+            
+        //}
+        ///0 1 2 3
+        /// 0
+        /// 
+        ///
+
+        if (i != 0)
+        {
+            for (int j = i; j < crews.Length; j++)
+            {
+                crews[j].Export_Crew_Const();
+                ExpeditionCrew temp2 = crews[j].export;
+                crews[j - 1].Replace_crew(temp2);
+            }
+            crews[3].crew_remove();
+        }
+        else
+        {
+            //crews[0].crew_remove();
+            for (int j = 1; j < crews.Length; j++)
+            {
+                crews[j].Export_Crew_Const();
+                ExpeditionCrew temp2 = crews[j].export;
+                crews[j - 1].Replace_crew(temp2);
+            }
+            crews[3].crew_remove();
+        }
+        
+
+    }
     public void Crew_update_export()
     {
         foreach(Crew_Sc crew in crews)
@@ -157,19 +236,48 @@ public class Core : MonoBehaviour
             Crew_Sc dummy = crews[i];
             dummy.Export_Crew_Const();
             ExpeditionCrew newone = dummy.export;
-            Output.Add(newone);
+            if(newone.CREW_ID != 0)
+            {
+                Output.Add(newone);
+            }
+            
         }
         //Output = Core_Crew;
 
         return Output;
     }
+    public bool crew_life_check()
+    {
+        List<bool> b = new List<bool>();
+        Crew_update_export();
+        foreach (Crew_Sc crew in crews)
+        {
+            if (crew.export.CREW_ID != 0)
+            {
+                b.Add(true);
+            }
+            else
+                b.Add(false);
+        }
 
+        if (!b.Contains(true))
+        {
+            return true;
+        }
+        else
+            return false;
+    }
     public List<Crew_Sc> Crew_Read_All_New()
     {
+        Crew_update_export();
         List<Crew_Sc> Output = new List<Crew_Sc>();
         foreach(Crew_Sc crew in crews)
         {
-            Output.Add(crew);
+            if(crew.export.CREW_ID != 0)
+            {
+                Output.Add(crew);
+            }
+            
         }
 
         return Output;
@@ -416,9 +524,13 @@ public class Core : MonoBehaviour
     public void Action_do()
     {
         On_Round_Ends?.Invoke(this, EventArgs.Empty);
-
+        BeforeAction();
+        Crew_Statue_Changed();
     }
-
+    public void BeforeAction()
+    {
+        On_Round_Ends_2?.Invoke(this, EventArgs.Empty);
+    }
     public void Next_Day()
     {
         On_Day_Ends?.Invoke(this, EventArgs.Empty);

@@ -1,8 +1,34 @@
 {
     "Traits": [
         {
+            "categrory": 1,
+            "modifiers": [
+                {
+                    "statname": "HPMAX",
+                    "value": 25.0,
+                    "mult": false
+                },
+                {
+                    "statname": "hungerMAX",
+                    "value": 25.0,
+                    "mult": false
+                }
+            ],
+            "path": "crew_generic",
+            "icon": {
+                "instanceID": 0
+            },
+            "big_icon": {
+                "instanceID": 0
+            },
+            "name": "겨울 체질",
+            "description": "이 대원은 선천적으로 추위에 강한 것 같습니다.<br>최대 체력과 허기가 25 상승합니다.",
+            "unique": false
+        },
+        {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -10,12 +36,13 @@
                 "instanceID": 30942
             },
             "name": "썰매 개",
-            "description": "개썰매를 끌기 위한 개들이 배정되었습니다.\\n개썰매를 사용할 수 있습니다.",
+            "description": "개썰매를 끌기 위한 개들이 배정되었습니다.<br>개썰매를 사용할 수 있습니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -23,12 +50,13 @@
                 "instanceID": 30942
             },
             "name": "스키",
-            "description": "개인용 스키를 가지고 있습니다.\\n스키와 관련된 특성이 있다면 스키 이동수단을 사용할 수 있습니다.",
+            "description": "개인용 스키를 가지고 있습니다.<br>스키와 관련된 특성이 있다면 스키 이동수단을 사용할 수 있습니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -48,6 +76,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -59,32 +88,9 @@
             "unique": false
         },
         {
-            "categrory": 1,
-            "modifiers": [
-                {
-                    "statname": "HPMAX",
-                    "value": 25.0,
-                    "mult": false
-                },
-                {
-                    "statname": "hungerMAX",
-                    "value": 25.0,
-                    "mult": false
-                }
-            ],
-            "icon": {
-                "instanceID": 30940
-            },
-            "big_icon": {
-                "instanceID": 30940
-            },
-            "name": "겨울 체질",
-            "description": "이 대원은 선천적으로 추위에 강한 것 같습니다.\\n최대 체력과 허기가 25 상승합니다.",
-            "unique": false
-        },
-        {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -92,7 +98,7 @@
                 "instanceID": 30942
             },
             "name": "조랑말",
-            "description": "타고다닐 조랑말이 배정되었습니다.\\n조랑말 이동수단을 사용할 수 있습니다.",
+            "description": "타고다닐 조랑말이 배정되었습니다.<br>조랑말 이동수단을 사용할 수 있습니다.",
             "unique": false
         },
         {
@@ -104,6 +110,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -111,12 +118,13 @@
                 "instanceID": 30942
             },
             "name": "망가진 스노모빌",
-            "description": "이 대원은 고장난 스노모빌을 끌고다닙니다.\\n이동수단을 걷기로 고정시키고, 이동속도를 0.2배로 만듭니다.",
+            "description": "이 대원은 고장난 스노모빌을 끌고다닙니다.<br>이동수단을 걷기로 고정시키고, 이동속도를 0.2배로 만듭니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -130,6 +138,7 @@
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -137,12 +146,13 @@
                 "instanceID": 30942
             },
             "name": "여분의 양모 옷",
-            "description": "양모로 짜여진 여분의 방한복입니다.\\n방한복을 양모 옷으로 변경 가능합니다.",
+            "description": "양모로 짜여진 여분의 방한복입니다.<br>방한복을 양모 옷으로 변경 가능합니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -150,12 +160,13 @@
                 "instanceID": 30942
             },
             "name": "여분의 모피 옷",
-            "description": "이누이트들의 전통복식에서 착안한 모피 방한복입니다. 굉장히 따뜻하고, 땀을 잘 흡수합니다.\\n방한복을 모피 옷으로 변경 가능합니다.",
+            "description": "이누이트들의 전통복식에서 착안한 모피 방한복입니다. 굉장히 따뜻하고, 땀을 잘 흡수합니다.<br>방한복을 모피 옷으로 변경 가능합니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -169,6 +180,7 @@
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -176,12 +188,13 @@
                 "instanceID": 30942
             },
             "name": "비상식량 보유",
-            "description": "이 대원은 비상시에 사용할 영양가 넘치는 비상식량을 소지하고있습니다.\\n허기가 0이 되었을 때 사망을 방지하고, 허기를 25로 회복시킨 후 특성이 사라집니다.",
+            "description": "이 대원은 비상시에 사용할 영양가 넘치는 비상식량을 소지하고있습니다.<br>허기가 0이 되었을 때 사망을 방지하고, 허기를 25로 회복시킨 후 특성이 사라집니다.",
             "unique": false
         },
         {
             "categrory": 2,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30942
             },
@@ -189,12 +202,13 @@
                 "instanceID": 30942
             },
             "name": "카메라",
-            "description": "이 대원은 개인용 카메라를 가지고 있습니다. 남극의 이색적인 풍경을 담기 좋겠군요.\\n라운드마다 신뢰도를 5 회복합니다.",
+            "description": "이 대원은 개인용 카메라를 가지고 있습니다. 남극의 이색적인 풍경을 담기 좋겠군요.<br>라운드마다 신뢰도를 5 회복합니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -208,6 +222,7 @@
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -215,12 +230,13 @@
                 "instanceID": 30940
             },
             "name": "스키 챔피언",
-            "description": "이 대원은 과거 저명한 스키 대회에서 금메달을 수상했던 인물입니다.\\n스키를 사용할 때 이동속도가 0.1 증가합니다\\n또한 휴식 이벤트에서 특별한 선택지를 제공합니다.",
+            "description": "이 대원은 과거 저명한 스키 대회에서 금메달을 수상했던 인물입니다.<br>스키를 사용할 때 이동속도가 0.1 증가합니다<br>또한 휴식 이벤트에서 특별한 선택지를 제공합니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -228,12 +244,13 @@
                 "instanceID": 30940
             },
             "name": "노르웨이 스키 챔피언",
-            "description": "올라프 비욜란은 세계 스키대회 챔피언이자, 자신의 스키를 직접 만들 줄 아는 유능한 목수이기도 합니다.\\n스키를 사용할  때 이동속도와 최소 이동거리가 0.1 증가하며 휴식 이벤트에서 특별한 선택지를 제공합니다.\\n또한 정비 행동에서 특별한 아이템을 제작 가능합니다.",
+            "description": "올라프 비욜란은 세계 스키대회 챔피언이자, 자신의 스키를 직접 만들 줄 아는 유능한 목수이기도 합니다.<br>스키를 사용할  때 이동속도와 최소 이동거리가 0.1 증가하며 휴식 이벤트에서 특별한 선택지를 제공합니다.<br>또한 정비 행동에서 특별한 아이템을 제작 가능합니다.",
             "unique": true
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -241,7 +258,7 @@
                 "instanceID": 30940
             },
             "name": "말 사육사",
-            "description": "이 대원은 원정대의 조랑말들을 관리하는 직책을 부여받았습니다.\\n원정대원들이 조랑말 이동수단을 사용할 수 있게 하며, 자신은 조랑말을 통해 이동해도 말 사료를 소모하지 않습니다.",
+            "description": "이 대원은 원정대의 조랑말들을 관리하는 직책을 부여받았습니다.<br>원정대원들이 조랑말 이동수단을 사용할 수 있게 하며, 자신은 조랑말을 통해 이동해도 말 사료를 소모하지 않습니다.",
             "unique": false
         },
         {
@@ -253,6 +270,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -260,12 +278,13 @@
                 "instanceID": 30940
             },
             "name": "극지의 기사",
-            "description": "로렌스 오츠는 대영제국 육군 기병장교 출신의, 굉장히 유능하며 명석한 군인이자 탐험가입니다.\\n원정대원들이 조랑말 이동수단을 사용할 수 있게 하며, 자신은 조랑말을 통해 이동해도 말 사료를 소모하지 않습니다.\\n발목뼈에 박힌 총알로 인해 걸어서 이동할 때 이동속도가 0.05 감소합니다\\최대 체력이 50 증가하며, 신뢰도가 늘 최대치로 고정됩니다.",
+            "description": "로렌스 오츠는 대영제국 육군 기병장교 출신의, 굉장히 유능하며 명석한 군인이자 탐험가입니다.<br>원정대원들이 조랑말 이동수단을 사용할 수 있게 하며, 자신은 조랑말을 통해 이동해도 말 사료를 소모하지 않습니다.<br>발목뼈에 박힌 총알로 인해 걸어서 이동할 때 이동속도가 0.05 감소합니다\\최대 체력이 50 증가하며, 신뢰도가 늘 최대치로 고정됩니다.",
             "unique": true
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -273,12 +292,13 @@
                 "instanceID": 30940
             },
             "name": "개 사육사",
-            "description": "이 대원은 원정대의 썰매개들을 관리합니다.\\n원정대원들이 개썰매 이동수단을 사용할 수 있게 하며, 자신은 개썰매를 통해 이동해도 사료를 소모하지 않습니다.",
+            "description": "이 대원은 원정대의 썰매개들을 관리합니다.<br>원정대원들이 개썰매 이동수단을 사용할 수 있게 하며, 자신은 개썰매를 통해 이동해도 사료를 소모하지 않습니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -286,7 +306,7 @@
                 "instanceID": 30940
             },
             "name": "곰 조련사",
-            "description": "이렇게까지 해야하나 싶지만... 이 대원은 무려 곰을 다룰줄 압니다!\\n원정대원들이 곰썰매 이동수단을 사용할 수 있게 하며, 자신은 곰썰매를 통해 이동할 때 사료를 3개만 소모합니다.",
+            "description": "이렇게까지 해야하나 싶지만... 이 대원은 무려 곰을 다룰줄 압니다!<br>원정대원들이 곰썰매 이동수단을 사용할 수 있게 하며, 자신은 곰썰매를 통해 이동할 때 사료를 3개만 소모합니다.",
             "unique": false
         },
         {
@@ -298,6 +318,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -305,7 +326,7 @@
                 "instanceID": 30940
             },
             "name": "길잡이",
-            "description": "이 대원은 눈밭에서 극점을 향하는 길을 안내하는 역할입니다.\\n이동속도가 0.1 증가합니다.",
+            "description": "이 대원은 눈밭에서 극점을 향하는 길을 안내하는 역할입니다.<br>이동속도가 0.1 증가합니다.",
             "unique": false
         },
         {
@@ -317,6 +338,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -324,12 +346,13 @@
                 "instanceID": 30940
             },
             "name": "지나친 베테랑",
-            "description": "이 대원은 굉장히 숙련되고 저명한 탐험가입니다. 당신의 지시가 비이성적이고 불합리하다고 의심할 정도로 말이죠.\\n이동속도가 0.15 증가합니다.\\n라운드마다 모든 대원의 신뢰도를 15 감소시킵니다.",
+            "description": "이 대원은 굉장히 숙련되고 저명한 탐험가입니다. 당신의 지시가 비이성적이고 불합리하다고 의심할 정도로 말이죠.<br>이동속도가 0.15 증가합니다.<br>라운드마다 모든 대원의 신뢰도를 15 감소시킵니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -343,6 +366,7 @@
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -356,6 +380,7 @@
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -369,6 +394,7 @@
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -382,6 +408,7 @@
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -401,6 +428,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -408,7 +436,7 @@
                 "instanceID": 30940
             },
             "name": "강인한 체력",
-            "description": "이 대원은 체력이 좋습니다.\\n최대 체력이 25 증가합니다.",
+            "description": "이 대원은 체력이 좋습니다.<br>최대 체력이 25 증가합니다.",
             "unique": false
         },
         {
@@ -420,6 +448,7 @@
                     "mult": false
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -427,12 +456,13 @@
                 "instanceID": 30940
             },
             "name": "유리몸",
-            "description": "이 대원은 남들보다 몸이 허약합니다.\\n최대 체력이 25 감소합니다.",
+            "description": "이 대원은 남들보다 몸이 허약합니다.<br>최대 체력이 25 감소합니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -440,12 +470,13 @@
                 "instanceID": 30940
             },
             "name": "빠른 회복",
-            "description": "이 대원은 부상에서 빠르게 회복하는 체질입니다.\\n라운드 종료 후 체력을 3 회복합니다.",
+            "description": "이 대원은 부상에서 빠르게 회복하는 체질입니다.<br>라운드 종료 후 체력을 3 회복합니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -453,12 +484,13 @@
                 "instanceID": 30940
             },
             "name": "충성스러움",
-            "description": "당신을 굳게 신뢰하고있는, 굉장히 충성스러운 대원입니다.\\n그는 당신이 모두를 남극점으로 데려가고, 무사히 돌아오게 해줄 것이라 믿어 의심치 않습니다.\\n라운드 종료 후 신뢰도를 5 회복합니다.",
+            "description": "당신을 굳게 신뢰하고있는, 굉장히 충성스러운 대원입니다.<br>그는 당신이 모두를 남극점으로 데려가고, 무사히 돌아오게 해줄 것이라 믿어 의심치 않습니다.<br>라운드 종료 후 신뢰도를 5 회복합니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -466,12 +498,13 @@
                 "instanceID": 30940
             },
             "name": "대영제국 해군 대령의 지휘를 받는 중",
-            "description": "우리의 조국은 해가 지지 않고, 우리 문명은 어느 때보다 찬란하며, 그 누구보다도 발전된 장비와 전략을 가지고 명예롭고 용맹하게 나아갑니다.\\n대체 무엇이 부족하겠습니까?",
+            "description": "우리의 조국은 해가 지지 않고, 우리 문명은 어느 때보다 찬란하며, 그 누구보다도 발전된 장비와 전략을 가지고 명예롭고 용맹하게 나아갑니다.<br>대체 무엇이 부족하겠습니까?",
             "unique": true
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -479,12 +512,13 @@
                 "instanceID": 30944
             },
             "name": "탈진",
-            "description": "이 대원은 허기로 인한 탈진 상태입니다.\\n전진으로 소모하는 체력이 2배가 되며 하루마다 신뢰도를 5 잃습니다.\\n허기가 100 이상이 되면 즉시 제거됩니다.",
+            "description": "이 대원은 허기로 인한 탈진 상태입니다.<br>전진으로 소모하는 체력이 2배가 되며 하루마다 신뢰도를 5 잃습니다.<br>허기가 100 이상이 되면 즉시 제거됩니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -492,7 +526,7 @@
                 "instanceID": 30944
             },
             "name": "동상",
-            "description": "이 대원은 동상을 입었습니다.\\n하루마다 체력과 신뢰도가 5씩 감소합니다.\\n향후 경과를 지켜봐야할 것 같습니다...",
+            "description": "이 대원은 동상을 입었습니다.<br>하루마다 체력과 신뢰도가 5씩 감소합니다.<br>향후 경과를 지켜봐야할 것 같습니다...",
             "unique": false
         },
         {
@@ -504,6 +538,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -511,7 +546,7 @@
                 "instanceID": 30944
             },
             "name": "심한 동상",
-            "description": "이 대원은 심각한 동상을 입었습니다!\\n이동속도가 25% 감소하고, 라운드마다 체력과 신뢰도가 5씩 감소합니다.",
+            "description": "이 대원은 심각한 동상을 입었습니다!<br>이동속도가 25% 감소하고, 라운드마다 체력과 신뢰도가 5씩 감소합니다.",
             "unique": false
         },
         {
@@ -523,6 +558,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -530,7 +566,7 @@
                 "instanceID": 30944
             },
             "name": "활기 넘침",
-            "description": "이 대원은 기운이 넘칩니다.\\n이동속도가 15% 증가하고, 전진으로 체력을 소모하지 않게 됩니다.",
+            "description": "이 대원은 기운이 넘칩니다.<br>이동속도가 15% 증가하고, 전진으로 체력을 소모하지 않게 됩니다.",
             "unique": false
         },
         {
@@ -542,6 +578,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -549,12 +586,13 @@
                 "instanceID": 30944
             },
             "name": "실족",
-            "description": "이 대원은 모종의 이유로 다리를 크게 다쳤습니다.\\n이동속도가 50% 감소합니다.",
+            "description": "이 대원은 모종의 이유로 다리를 크게 다쳤습니다.<br>이동속도가 50% 감소합니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -562,7 +600,7 @@
                 "instanceID": 30944
             },
             "name": "부상",
-            "description": "이 대원은 비교적 큰 부상을 입었습니다.\\n하루마다 체력을 5씩 잃습니다.",
+            "description": "이 대원은 비교적 큰 부상을 입었습니다.<br>하루마다 체력을 5씩 잃습니다.",
             "unique": false
         },
         {
@@ -574,6 +612,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -581,12 +620,13 @@
                 "instanceID": 30944
             },
             "name": "치명적 뇌손상",
-            "description": "\"힘든 고비다. 에반스가 뇌를 다친 것 같다. 그는 완전히 변했다. 이전의 모습은 거의 찾아볼 수가 없다.\"\\n크레바스 추락으로 인해 치명적인 뇌손상을 입었습니다.\\n이동속도가 100% 감소합니다.\\n준비하십시오. 장담컨데, 오래 못 버틸 겁니다....",
+            "description": "\"힘든 고비다. 에반스가 뇌를 다친 것 같다. 그는 완전히 변했다. 이전의 모습은 거의 찾아볼 수가 없다.\"<br>크레바스 추락으로 인해 치명적인 뇌손상을 입었습니다.<br>이동속도가 100% 감소합니다.<br>준비하십시오. 장담컨데, 오래 못 버틸 겁니다....",
             "unique": true
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -594,12 +634,13 @@
                 "instanceID": 30944
             },
             "name": "불만",
-            "description": "이 대원은 현 상황에 불만을 가집니다.\\n하루마다 신뢰도가 5씩 감소합니다.",
+            "description": "이 대원은 현 상황에 불만을 가집니다.<br>하루마다 신뢰도가 5씩 감소합니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -607,7 +648,7 @@
                 "instanceID": 30944
             },
             "name": "만족스러움",
-            "description": "이 대원은 현 상황에 꽤나 만족하고 있습니다.\\n라운드마다 신뢰도를 5씩 회복합니다.",
+            "description": "이 대원은 현 상황에 꽤나 만족하고 있습니다.<br>라운드마다 신뢰도를 5씩 회복합니다.",
             "unique": false
         },
         {
@@ -619,6 +660,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -626,12 +668,13 @@
                 "instanceID": 30944
             },
             "name": "저체온증",
-            "description": "이 대원은 위협적인 저체온증에 시달리고 있습니다!\\n라운드마다 체력이 1, 신뢰도가 10 감소하며 이동속도가 50% 줄어듭니다.",
+            "description": "이 대원은 위협적인 저체온증에 시달리고 있습니다!<br>라운드마다 체력이 1, 신뢰도가 10 감소하며 이동속도가 50% 줄어듭니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -639,12 +682,13 @@
                 "instanceID": 30944
             },
             "name": "포만감",
-            "description": "이 대원은 배가 부릅니다.\\n라운드마다 줄어드는 허기가 10 줄어듭니다.",
+            "description": "이 대원은 배가 부릅니다.<br>라운드마다 줄어드는 허기가 10 줄어듭니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -652,7 +696,7 @@
                 "instanceID": 30944
             },
             "name": "옷이 찢어짐",
-            "description": "이 대원이 입고있는 옷이 찢어졌습니다!\\n체온 관리가 힘들어 질 것 같습니다.",
+            "description": "이 대원이 입고있는 옷이 찢어졌습니다!<br>체온 관리가 힘들어 질 것 같습니다.",
             "unique": false
         },
         {
@@ -664,6 +708,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -671,12 +716,13 @@
                 "instanceID": 30944
             },
             "name": "설맹증",
-            "description": "이 대원은 일시적으로 눈이 멀었습니다.\\n이동속도가 30% 감소하고, 라운드마다 신뢰도를 5 잃습니다.",
+            "description": "이 대원은 일시적으로 눈이 멀었습니다.<br>이동속도가 30% 감소하고, 라운드마다 신뢰도를 5 잃습니다.",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -684,12 +730,13 @@
                 "instanceID": 30944
             },
             "name": "더위",
-            "description": "이 대원은 심한 더위를 호소합니다.\\n향후 경과를 지켜봐야 할 것 같습니다...",
+            "description": "이 대원은 심한 더위를 호소합니다.<br>향후 경과를 지켜봐야 할 것 같습니다...",
             "unique": false
         },
         {
             "categrory": 0,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -697,7 +744,7 @@
                 "instanceID": 30944
             },
             "name": "심한 땀",
-            "description": "이 대원은 더위로 인해 땀에 절여 고통받고 있습니다.\\n하루마다 신뢰도가 10씩 감소합니다.",
+            "description": "이 대원은 더위로 인해 땀에 절여 고통받고 있습니다.<br>하루마다 신뢰도가 10씩 감소합니다.",
             "unique": false
         },
         {
@@ -709,6 +756,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30944
             },
@@ -716,12 +764,13 @@
                 "instanceID": 30944
             },
             "name": "영양실조",
-            "description": "이 대원은 식단의 영양 불균형으로 고통받고 있습니다.\\n이동속도가 25% 감소하고, 라운드마다 체력과 허기가 10씩 줄어듭니다.",
+            "description": "이 대원은 식단의 영양 불균형으로 고통받고 있습니다.<br>이동속도가 25% 감소하고, 라운드마다 체력과 허기가 10씩 줄어듭니다.",
             "unique": false
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -729,12 +778,13 @@
                 "instanceID": 30940
             },
             "name": "낙하산",
-            "description": "헨리 보워즈는 원래 계획에 없던 낙하산 인사입니다.\\n탐험과 관련된 경험은 전무한 군인인 그는 이 원정에 도움될까요?",
+            "description": "헨리 보워즈는 원래 계획에 없던 낙하산 인사입니다.<br>탐험과 관련된 경험은 전무한 군인인 그는 이 원정에 도움될까요?",
             "unique": true
         },
         {
             "categrory": 1,
             "modifiers": [],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -742,7 +792,7 @@
                 "instanceID": 30940
             },
             "name": "친절",
-            "description": "이 대원은 성격이 좋고, 주변 사람들과 빠르게 친해집니다.\\n일주일마다 다른 대원들의 신뢰도를 5 회복시킵니다.",
+            "description": "이 대원은 성격이 좋고, 주변 사람들과 빠르게 친해집니다.<br>일주일마다 다른 대원들의 신뢰도를 5 회복시킵니다.",
             "unique": false
         },
         {
@@ -754,6 +804,7 @@
                     "mult": true
                 }
             ],
+            "path": "",
             "icon": {
                 "instanceID": 30940
             },
@@ -761,7 +812,7 @@
                 "instanceID": 30940
             },
             "name": "해병",
-            "description": "이 대원은 해병 출신입니다.\\n최대 체력이 5% 증가합니다.",
+            "description": "이 대원은 해병 출신입니다.<br>최대 체력이 5% 증가합니다.",
             "unique": false
         }
     ]

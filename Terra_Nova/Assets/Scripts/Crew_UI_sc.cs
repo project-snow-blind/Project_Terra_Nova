@@ -91,12 +91,20 @@ public class Crew_UI_sc : MonoBehaviour
             Trait_List[i].SetActive(false);
         }
 
-
-        for(int i = 0; i < crew.Traits.Count; i++)
+        int j = crew.Traits.Count;
+        //List<Trait_data> templist = new List<Trait_data>();
+        //templist = crew.Traits;
+        //templist.Reverse();
+        if (j > 8)
         {
+            j = 8;
+        }
+        for(int i = 0; i < j; i++)
+        {
+            
             Image trait_image = Trait_List[i].GetComponent<Image>();
 
-            trait_image.sprite = crew.Traits[i].icon;
+            trait_image.sprite = crew.Traits[j-1-i].icon;
         }
 
         switch(crew.CREW_MOVE)

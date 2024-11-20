@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System.Reflection;
+using System;
 //using System.IO;
 public class Crew_Sc : MonoBehaviour
 {
@@ -35,17 +36,16 @@ public class Crew_Sc : MonoBehaviour
     //int CrewPortraitSet;
     public ExpeditionCrew export;
     public Crew_Sc export_new;
-    void Start()
+
+    private void Start()
     {
-        
-    }
-    void Update()
-    {
-        
+        Core.core.On_Round_Ends_2 += RoundChecker;
+        Core.core.On_Day_Ends += DailyChecker;
     }
 
     public void Testing_Normalize_Crew(ExpeditionCrew listcrew)
     {
+        StopAllCoroutines();    
         CREW_ID = listcrew.CREW_ID;
         CREW_MOVE = listcrew.CREW_MOVE;
         CREW_CLOTH = listcrew.CREW_CLOTH;
@@ -60,12 +60,43 @@ public class Crew_Sc : MonoBehaviour
         temperature = listcrew.temperature;
         Portrait = listcrew.portrait;
         speed = listcrew.speed;
+        
         Trait_Reorg();
         HP = HPMAX;
         hunger = hungerMAX;
         morale = moraleMAX;
     }
-    
+    public void Replace_crew(ExpeditionCrew listcrew)
+    {
+        StopAllCoroutines();
+        CREW_ID = listcrew.CREW_ID;
+        CREW_MOVE = listcrew.CREW_MOVE;
+        CREW_CLOTH = listcrew.CREW_CLOTH;
+        //EQUIP_TRAIT = listcrew.EQUIP_TRAIT;
+        //EVENT_TRAIT = listcrew.EVENT_TRAIT;
+        //CREW_TRAIT = listcrew.CREW_TRAIT;
+        traits = listcrew.Traits;
+        CREW_NAME = listcrew.CREW_NAME;
+        HPMAX = 100;
+        hungerMAX = 100;
+        moraleMAX = 100;
+        temperature = listcrew.temperature;
+        Portrait = listcrew.portrait;
+        speed = listcrew.speed;
+
+        Trait_Reorg();
+        HP = listcrew.HP;
+        hunger = listcrew.hunger;
+        morale = listcrew.hunger;
+    }
+    public void crew_remove()
+    {
+        StopAllCoroutines();
+        CREW_ID = 0;
+        Core.core.Crew_Statue_Changed();
+    }
+
+
     public void Export_Crew_Const()
     {
         ExpeditionCrew Output = new ExpeditionCrew(CREW_ID, CREW_MOVE, CREW_CLOTH, CREW_NAME, HP, hunger, morale, traits, temperature, Portrait,speed, HPMAX, moraleMAX, hungerMAX);
@@ -204,6 +235,11 @@ public class Crew_Sc : MonoBehaviour
             if(traits.Contains(trait_data) == false)
             {
                 traits.Add(trait_data);
+                foreach (Modifier modifier in trait_data.modifiers)
+                {
+                    StartCoroutine(effecttest(modifier, this.GetComponent<Crew_Sc>(), trait_data));
+                }
+                
             }
         }
         else
@@ -214,104 +250,165 @@ public class Crew_Sc : MonoBehaviour
             }
         }
     }
-    //private IEnumerator Trait_effect2(Trait_data trait)
-    //{
-    //    while (traits.Contains(trait) == true)
-    //    {
-
-    //        yield return null;
-
-    //    }
-    //}
     protected IEnumerator Trait_effect(Trait_data trait)
     {
         foreach(Modifier modifier in trait.modifiers)
-        {
-            //var fi = GetType().GetTypeInfo().GetDeclaredField(modifier.statname);
-            var fi = GetType().GetTypeInfo().GetField(modifier.statname);
+        {            var fi = GetType().GetTypeInfo().GetField(modifier.statname);
             Debug.Log(fi);
-            //float v = (float)fi.GetValue(gameObject);
-
-            //float buffed;
-            //if (modifier.mult)
-            //{
-            //    float var = 1f + modifier.value;
-            //    buffed = v * var;
-            //}
-            //else
-            //{
-            //    buffed = v + modifier.value;
-            //}
-
-            //fi.SetValue(gameObject, buffed);
         }
-        //foreach(Modifier modifier in trait.modifiers)
-        //{
-        //    var fi = GetType().GetTypeInfo().GetDeclaredField(modifier.statname);
-
-        //    float v = (float)fi.GetValue(this);
-
-        //    float buffed;
-        //    if(modifier.mult)
-        //    {
-        //        float var = 1f + modifier.value;
-        //        buffed = v * var;
-        //    }
-        //    else
-        //    {
-        //        buffed = v + modifier.value;
-        //    }
-
-        //    fi.SetValue(this, buffed);
-        //}
-
         while (traits.Contains(trait) == true)
         {
 
             yield return null;
 
         }
-        //foreach (Modifier modifier in trait.modifiers)
-        //{
-        //    var fi = gameObject.GetType().GetTypeInfo().GetDeclaredField(modifier.statname);
-
-        //    float v = (float)fi.GetValue(gameObject);
-
-        //    float buffed;
-        //    if (modifier.mult)
-        //    {
-        //        float var = 1f - modifier.value;
-        //        buffed = v / var;
-        //    }
-        //    else
-        //    {
-        //        buffed = v - modifier.value;
-        //    }
-
-        //    fi.SetValue(gameObject, buffed);
-        //}
-        //foreach (Modifier modifier in trait.modifiers)
-        //{
-        //    var fi = GetType().GetTypeInfo().GetDeclaredField(modifier.statname);
-
-        //    float v = (float)fi.GetValue(this);
-
-        //    float buffed;
-        //    if (modifier.mult)
-        //    {
-        //        float var = 1f - modifier.value;
-        //        buffed = v / var;
-        //    }
-        //    else
-        //    {
-        //        buffed = v - modifier.value;
-        //    }
-
-        //    fi.SetValue(this, buffed);
-        //}
     }
 
+    private void RoundChecker(object sender, EventArgs eventArgs)
+    {
+        Stat_st st = new Stat_st();
+        foreach(Trait_data trait in traits)
+        {
+            switch(trait.name)
+            {
+                case "카메라":
+                    st.stat = "morale";
+                    st.value = 5;
+                    CrewEffect_Function(st);
 
+                    break;
+
+                case "극지의 기사":
+                    morale = moraleMAX;
+
+                    break;
+
+                case "지나친 베테랑":
+                    st.stat = "morale";
+                    st.value = -15;
+                    Core.core.Crew_effect_to_all(st);
+
+                    break;
+                case "빠른 회복":
+                    st.stat = "HP";
+                    st.value = 3;
+                    CrewEffect_Function(st);
+
+                    break;
+                case "충성스러움":
+                    st.stat = "morale";
+                    st.value = 5;
+                    CrewEffect_Function(st);
+
+                    break;
+                case "심한 동상":
+                    st.stat = "morale";
+                    st.value = -5;
+                    CrewEffect_Function(st);
+                    st.stat = "HP";
+                    CrewEffect_Function(st);
+                    break;
+                case "만족스러움":
+                    st.stat = "morale";
+                    st.value = 5;
+                    CrewEffect_Function(st);
+
+                    break;
+                case "저체온증":
+                    st.stat = "HP";
+                    st.value = -1;
+                    CrewEffect_Function(st);
+                    st.stat = "morale";
+                    st.value = -10;
+                    CrewEffect_Function(st);
+                    break;
+                case "영양실조":
+                    st.stat = "HP";
+                    st.value = -10;
+                    CrewEffect_Function(st);
+                    st.stat = "hunger";
+                    CrewEffect_Function(st);
+                    break;
+
+                case "조랑말":
+                    Expedition.instance.Itemstorage_output("말 사료", 2);
+                    
+                    
+                    break;
+                case "썰매 개":
+                    Expedition.instance.Itemstorage_output("사료", 1);
+
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    private void DailyChecker(object sender, EventArgs eventArgs)
+    {
+        Stat_st st = new Stat_st();
+        foreach (Trait_data trait in traits)
+        {
+            switch (trait.name)
+            {
+                case "탈진":
+                    st.stat = "morale";
+                    st.value = 5;
+                    CrewEffect_Function(st);
+
+                    break;
+
+                case "동상":
+                    st.stat = "morale";
+                    st.value = 5;
+                    CrewEffect_Function(st);
+                    st.stat = "HP";
+                    CrewEffect_Function(st);
+
+                    break;
+
+                case "부상":
+                    st.stat = "HP";
+                    st.value = -5;
+                    Core.core.Crew_effect_to_all(st);
+
+                    break;
+                case "불만":
+                    st.stat = "morale";
+                    st.value = -5;
+                    CrewEffect_Function(st);
+
+                    break;
+                case "심한 땀":
+                    st.stat = "morale";
+                    st.value = -10;
+                    CrewEffect_Function(st);
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    private void WeeklyChecker(object sender, EventArgs eventArgs)
+    {
+        Stat_st st = new Stat_st();
+        foreach (Trait_data trait in traits)
+        {
+            switch (trait.name)
+            {
+                case "친절":
+                    st.stat = "morale";
+                    st.value = 5;
+                    Core.core.Crew_effect_to_all(st);
+
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
     public void move_style_change(CREW_MOVEMENT moveset)
     {
         CREW_MOVE = moveset;

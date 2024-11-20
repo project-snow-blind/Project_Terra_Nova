@@ -1,0 +1,64 @@
+{
+    "crewdata": [
+        {
+            "CREW_ID": 101,
+            "CREW_CLOTH": 5,
+            "traits": [
+                "극지의 기사",
+                "스노모빌",
+                "강인한 체력",
+                "길잡이",
+                "여분의 양모 옷",
+                "대영제국 해군 대령의 지휘를 받는 중"
+            ],
+            "CREW_NAME": "Lawrence Oates",
+            "temperature": 5,
+            "Portrait": 101
+        },
+        {
+            "CREW_ID": 102,
+            "CREW_CLOTH": 5,
+            "traits": [
+                "낙하산",
+                "스노모빌",
+                "충성스러움",
+                "친절",
+                "해병",
+                "강인한 체력",
+                "여분의 양모 옷",
+                "대영제국 해군 대령의 지휘를 받는 중"
+            ],
+            "CREW_NAME": "Henry R. Bowers",
+            "temperature": 5,
+            "Portrait": 103
+        },
+        {
+            "CREW_ID": 103,
+            "CREW_CLOTH": 5,
+            "traits": [
+                "스노모빌",
+                "충성스러움",
+                "해병",
+                "여분의 양모 옷",
+                "대영제국 해군 대령의 지휘를 받대영제국 해군 대령의 지휘를 받는 중"
+            ],
+            "CREW_NAME": "Edgar Evans",
+            "temperature": 5,
+            "Portrait": 102
+        },
+        {
+            "CREW_ID": 104,
+            "CREW_CLOTH": 5,
+            "traits": [
+                "스노모빌",
+                "충성스러움",
+                "지나친 베테랑",
+                "여분의 양모 옷",
+                "대영제국 해군 대령의 지휘를 받대영제국 해군 대령의 지휘를 받는 중"
+            ],
+            "CREW_NAME": "Robert F. Scott",
+            "temperature": 5,
+            "Portrait": 100
+        }
+    ]
+}

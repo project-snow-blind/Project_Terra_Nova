@@ -1,0 +1,89 @@
+{
+    "Event_Id": "supply_depo",
+    "tags": [
+        2,
+        3
+    ],
+    "Event_Picture": {
+        "instanceID": 0
+    },
+    "path": "wasteland_generic",
+    "Event_Name": "보급창 도착",
+    "Event_Desc": "보급창고 도착.<br>동장군의 매서운 기세가 점점 거세져오지만, 다행히 겨울 동안 세워둔 보급창고는 흰 죽음의 땅에서도 충실히 제 모습을 지키고 있었다. 깃발도 여전히 바람에 펄럭이고 있어 쉽게 찾을 수 있었다. 물자를 회수하자.<br><br>선택한 물자를 획득",
+    "effects": [
+        {
+            "target": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "randomtarget": false,
+            "stateffect": [],
+            "traiteffect": [],
+            "itemeffect": [],
+            "event_effect": []
+        }
+    ],
+    "event_trigger": {
+        "targetID": [],
+        "stat_trigger": [],
+        "Trait_trigger": [],
+        "geograph_trigger": [],
+        "progress_trigger": [],
+        "trigger_only": true,
+        "rest_event": true,
+        "is_evening": [],
+        "daycheck": [],
+        "item_limit": []
+    },
+    "eventchance": 1.0,
+    "fire_only_once": false,
+    "event_chance_var": [],
+    "eventoptions": [
+        {
+            "name": "\"먹을 것들\"",
+            "desc": "통조림 +20, 비스킷(통밀) +20, 초콜릿 +7",
+            "effects": [
+                {
+                    "target": {
+                        "targetID": [],
+                        "stat_trigger": [],
+                        "Trait_trigger": [],
+                        "geograph_trigger": [],
+                        "progress_trigger": [],
+                        "trigger_only": false,
+                        "rest_event": false,
+                        "is_evening": [],
+                        "daycheck": [],
+                        "item_limit": []
+                    },
+                    "randomtarget": false,
+                    "stateffect": [],
+                    "traiteffect": [],
+                    "itemeffect": [],
+                    "event_effect": []
+                }
+            ],
+            "trigger": {
+                "targetID": [],
+                "stat_trigger": [],
+                "Trait_trigger": [],
+                "geograph_trigger": [],
+                "progress_trigger": [],
+                "trigger_only": false,
+                "rest_event": false,
+                "is_evening": [],
+                "daycheck": [],
+                "item_limit": []
+            },
+            "Randomized": false
+        }
+    ]
+}

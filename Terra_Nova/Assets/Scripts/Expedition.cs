@@ -24,8 +24,6 @@ public class Expedition : MonoBehaviour
     private float progress = 0.000f;
     [SerializeField]
     CanvasGroup Curtain;
-    //[SerializeField]
-    //GameObject BottomUI;
 
     [SerializeField]
     private GameObject Event_Container,General_Info_Container,Action_Container,Undo_Bookmark;
@@ -50,7 +48,7 @@ public class Expedition : MonoBehaviour
 
 
     [SerializeField]
-    private List<Event_data> stacked_events;
+    private List<Event_data> stacked_events = new List<Event_data>();
 
 
 
@@ -79,6 +77,8 @@ public class Expedition : MonoBehaviour
     [SerializeField]
     private List<Item_data> changgo = new List<Item_data>();
 
+    [SerializeField]
+    private bool[] progresscheckerarray = new bool[19];
     enum expedition_state
     {
         action,
@@ -110,8 +110,8 @@ public class Expedition : MonoBehaviour
 
         List<Crew_Sc> crews = Core.core.Crew_Read_All_New();
 
-        
-        foreach(Crew_Sc crew in crews)
+        round_storage_check();
+        foreach (Crew_Sc crew in crews)
         {
             ExpeditionCrew export = crew.export;
 
@@ -147,8 +147,15 @@ public class Expedition : MonoBehaviour
         foreach (Crew_Sc crew in crews)
         {
             Stat_st stat = new Stat_st("hunger", -20f);
+            Trait_data check = Trait_Library.instance.GetTrait("포만감");
+            if(crew.export.Traits.Contains(check))
+            {
+                stat.value += 10f;
+            }
             crew.CrewEffect_Function(stat);
         }
+        crew_death_checker();
+        progresschecker();
         DayUpdate();
 
 
@@ -166,6 +173,7 @@ public class Expedition : MonoBehaviour
             sun.sprite = sprites[0];
             //cameras.backgroundColor = new Color32(255, 255, 255, 0);
             days++;
+            Core.core.Next_Day();
         }
         else
         {
@@ -278,55 +286,55 @@ public class Expedition : MonoBehaviour
         ProgressbarUpdate();
         
     }
-    private void Expedition_round_ends()
-    {
-        List<ExpeditionCrew> old_crew_list = new List<ExpeditionCrew>();
-        List<ExpeditionCrew> new_crew_list = new List<ExpeditionCrew>();
-        old_crew_list = Core.core.Crew_Read_All();
-        foreach(ExpeditionCrew crew in old_crew_list)
-        {
-            ExpeditionCrew newone = ExpeditionRoundEndFuction(crew);
-            new_crew_list.Add(newone);
-        }
-        int crew_count = new_crew_list.Count;
+    //private void Expedition_round_ends()
+    //{
+    //    List<ExpeditionCrew> old_crew_list = new List<ExpeditionCrew>();
+    //    List<ExpeditionCrew> new_crew_list = new List<ExpeditionCrew>();
+    //    old_crew_list = Core.core.Crew_Read_All();
+    //    foreach(ExpeditionCrew crew in old_crew_list)
+    //    {
+    //        ExpeditionCrew newone = ExpeditionRoundEndFuction(crew);
+    //        new_crew_list.Add(newone);
+    //    }
+    //    int crew_count = new_crew_list.Count;
 
-        for(int i = 0; i < crew_count; i++)
-        {
-            Core.core.Crew_update(i, new_crew_list[i]);
-        }
-        Core.core.Crew_Statue_Changed();
-        currenttime = !currenttime;
-        DayUpdate();
+    //    for(int i = 0; i < crew_count; i++)
+    //    {
+    //        Core.core.Crew_update(i, new_crew_list[i]);
+    //    }
+    //    Core.core.Crew_Statue_Changed();
+    //    currenttime = !currenttime;
+    //    DayUpdate();
 
-        //#앵커
-        //EventPopUp_Test(Random.Range(1, 3));
-    }
-    private ExpeditionCrew ExpeditionRoundEndFuction(ExpeditionCrew crew)
-    {
-        ExpeditionCrew new_crew = crew;
-        new_crew.hunger -= 5f;
-        if(new_crew.hunger / new_crew.hungerMAX > 0.8f)
-        {
-            new_crew.HP += 10;
-            if (new_crew.HP > new_crew.HPMAX)
-                new_crew.HP = new_crew.HPMAX;
-        }
+    //    //#앵커
+    //    //EventPopUp_Test(Random.Range(1, 3));
+    //}
+    //private ExpeditionCrew ExpeditionRoundEndFuction(ExpeditionCrew crew)
+    //{
+    //    ExpeditionCrew new_crew = crew;
+    //    new_crew.hunger -= 5f;
+    //    if(new_crew.hunger / new_crew.hungerMAX > 0.8f)
+    //    {
+    //        new_crew.HP += 10;
+    //        if (new_crew.HP > new_crew.HPMAX)
+    //            new_crew.HP = new_crew.HPMAX;
+    //    }
 
-        if(new_crew.hunger / new_crew.hungerMAX < 0.5f && new_crew.hunger / new_crew.hungerMAX > 0.26f)
-        {
-            new_crew.morale -= 10f;
-        }
-        else if (new_crew.hunger / new_crew.hungerMAX < 0.25f && new_crew.hunger / new_crew.hungerMAX > 0.16f)
-        {
-            new_crew.morale -= 25f;
-        }
-        else if (new_crew.hunger / new_crew.hungerMAX < 0.15f)
-        {
-            new_crew.morale -= 50f;
-        }
+    //    if(new_crew.hunger / new_crew.hungerMAX < 0.5f && new_crew.hunger / new_crew.hungerMAX > 0.26f)
+    //    {
+    //        new_crew.morale -= 10f;
+    //    }
+    //    else if (new_crew.hunger / new_crew.hungerMAX < 0.25f && new_crew.hunger / new_crew.hungerMAX > 0.16f)
+    //    {
+    //        new_crew.morale -= 25f;
+    //    }
+    //    else if (new_crew.hunger / new_crew.hungerMAX < 0.15f)
+    //    {
+    //        new_crew.morale -= 50f;
+    //    }
 
-        return new_crew;
-    }
+    //    return new_crew;
+    //}
 
 
     private void ProgressbarUpdate()
@@ -336,98 +344,6 @@ public class Expedition : MonoBehaviour
         prog_persentage.text = progress.ToString() + "%";
         
     }
-
-    
-    //public void Adv_PopUP_Active()
-    //{
-    //    Adv_PopUp.SetActive(true);
-
-    //    List<ExpeditionCrew> crew_list = new List<ExpeditionCrew>();
-    //    crew_list = Core.core.Crew_Read_All();
-    //    List<float> spd = new List<float>();
-    //    foreach (ExpeditionCrew crew in crew_list)
-    //    {
-    //        spd.Add(SpdCalc(crew));
-    //    }
-    //    spd.Sort();
-    //    float progresslength = spd[0];
-
-    //    Adv_text.text = "예상 진행 거리 : " + progresslength.ToString();
-    //    Curtain.alpha = 0.75f;
-    //    Core.core.aud.AudioPlay(0);
-    //}
-    //public void RestingPopUpActive()
-    //{
-    //    Curtain.alpha = 0.75f;
-    //    RestingPopUp.SetActive(true);
-
-    //    List<ExpeditionCrew> old_crew_list = new List<ExpeditionCrew>();
-    //    List<ExpeditionCrew> new_crew_list = new List<ExpeditionCrew>();
-    //    old_crew_list = Core.core.Crew_Read_All();
-    //    foreach (ExpeditionCrew crew in old_crew_list)
-    //    {
-            
-            
-    //        new_crew_list.Add(RestingFunction(crew));
-            
-    //    }
-        
-    //    int crew_count = new_crew_list.Count;
-
-    //    for (int i = 0; i < crew_count; i++)
-    //    {
-            
-    //        RestingTxt[i].text = new_crew_list[i].CREW_NAME + "\n" + old_crew_list[i].morale + "/" + old_crew_list[i].moraleMAX + "->" + new_crew_list[i].morale + "/" + new_crew_list[i].moraleMAX;
-    //    }
-    //    Core.core.aud.AudioPlay(0);
-    //    //RestingTxt.text = "예상 진행 거리 : " + progresslength.ToString();
-    //}
-
-    //private ExpeditionCrew RestingFunction(ExpeditionCrew crew)
-    //{
-    //    ExpeditionCrew new_crew = crew;
-    //    new_crew.morale += 20f;
-    //    if(new_crew.morale >= new_crew.moraleMAX)
-    //    {
-    //        new_crew.morale = new_crew.moraleMAX;
-    //    }
-
-    //    return new_crew;
-    //}
-
-    //public void ItemPopUp_Tab_Toggle(int i)
-    //{
-
-    //    Item_Popup.GetComponent<ItemPopUp_Sc>().Bkgswap(i);
-    //    Core.core.aud.AudioPlay(0);
-    //}
-    //public void ItemPopUp_Exit()
-    //{
-    //    Item_Popup.SetActive(false);
-    //    if(Usage_Bt.activeSelf == true)
-    //    {
-    //        Usage_Bt.SetActive(false);
-    //    }
-    //    Core.core.aud.AudioPlay(0);
-    //}
-    
-    //public void EventPopUp_Test(int i)
-    //{
-    //    //Curtain.alpha = 0.75f;
-    //    switch(i)
-    //    {
-    //        case 0:
-    //            Event_Popup.SetActive(true);
-    //            break;
-    //        case 1:
-    //            Event_Popup2.SetActive(true);
-    //            break;
-    //        case 2:
-    //            Event_Popup3.SetActive(true);
-    //            break;
-    //    }
-        
-    //}
     
     public void MenuPopUp_Test()
     {
@@ -449,6 +365,7 @@ public class Expedition : MonoBehaviour
             case 1:
 
                 SceneManager.LoadScene("Title_Scene");
+                Core.core.BGM.stopsound();
                 break;
 
             case 2:
@@ -475,66 +392,216 @@ public class Expedition : MonoBehaviour
         
     }
 
-    public void Random_event_Creator()
+
+    public void Event_add(string evnt)
+    {
+        Event_data evntdata = Event_Library.instance.GetEvent(evnt);
+        stacked_events.Add(evntdata);
+    }
+    public void Random_event_Creator(bool b)
     {
         List<Event_data> All_Events = Event_Library.instance.All_Events;
+        List<Event_data> Temppool1 = new List<Event_data>();
+        //List<Event_data> Temppool2 = new List<Event_data>();
         List<Event_data> new_pool = new List<Event_data>();
 
-        foreach(Event_data eventcls in All_Events)
+        foreach(Event_data evntcls in All_Events)
+        {
+            if(b)
+            {
+                if(evntcls.event_trigger.rest_event)
+                {
+
+                    Temppool1.Add(evntcls);
+                    //All_Events.Remove(evntcls);
+                }
+            }
+            else
+            {
+                if(!evntcls.event_trigger.rest_event)
+                {
+                    Temppool1.Add(evntcls);
+                    //All_Events.Remove(evntcls);
+                }
+            }
+        }
+
+        
+        foreach(Event_data eventcls in Temppool1)
         {
             if(trigger_checker(eventcls.event_trigger))
             {
-                if(eventcls.event_chance_var.Any())
+                //if(eventcls.event_trigger.trigger_only)
+                //{
+                //    All_Events.Remove(eventcls);
+                //}
+                //else
+                //{
+                if(!eventcls.event_trigger.trigger_only)
                 {
-                    foreach(change_variable var in eventcls.event_chance_var)
+                    if (eventcls.event_chance_var.Any())
                     {
-                        if(trigger_checker(var.trigger))
+                        foreach (change_variable var in eventcls.event_chance_var)
                         {
-                            eventcls.eventchance *= var.value;
+                            if (trigger_checker(var.trigger))
+                            {
+                                eventcls.eventchance *= var.value;
+                            }
+
+                        }
+                        int v = Mathf.RoundToInt(eventcls.eventchance);
+                        for (int i = 0; i < v; i++)
+                        {
+                            new_pool.Add(eventcls);
+                        }
+                    }
+                    else
+                    {
+                        int v = Mathf.RoundToInt(eventcls.eventchance);
+                        for (int i = 0; i < v; i++)
+                        {
+                            new_pool.Add(eventcls);
                         }
 
                     }
-                    for (int i = 0; i < eventcls.eventchance; i++)
-                    {
-                        new_pool.Add(eventcls);
-                    }
                 }
-                else
-                {
-                    for(int i = 0; i < eventcls.eventchance; i++)
-                    {
-                        new_pool.Add(eventcls);
-                    }
-                    
-                }
+                //Debug.Log(eventcls.Event_Name);
+                //Debug.Log(eventcls.eventchance);
+                //}
+                
             }
         }
         int j = UnityEngine.Random.Range(0, new_pool.Count);
         stacked_events.Add(new_pool[j]);
     }
 
-
-
-
-    private void eventoptionstrainer(Event_data eventcls)
+    [SerializeField]
+    TextMeshProUGUI event_title, event_desc,eventcount;
+    [SerializeField]
+    Image event_image;
+    private void eventloader()
     {
-        Event_data evnt = eventcls;
-        List<EventOption> newlist = new List<EventOption>();
-        foreach (EventOption option in evnt.eventoptions)
+        Event_data targetevent = eventoptionstrainer(stacked_events[0]);
+
+        if(targetevent.fire_only_once == true)
         {
-            if(trigger_checker(option.trigger))
+            Event_data original = Event_Library.instance.GetEvent(targetevent.Event_Name);
+            Event_Library.instance.All_Events.Find(x => x == original).event_trigger.trigger_only = true;
+        }
+
+        if(targetevent.effects.Any())
+        {
+            foreach(Effect efct in targetevent.effects)
             {
-                newlist.Add(option);
+                effectworkingmethod(efct);
             }
         }
-        evnt.eventoptions = newlist;
-        for (int i = evnt.eventoptions.Count; i < Options.Length; i++)
+
+
+        event_title.text = targetevent.Event_Name;
+        event_desc.text = targetevent.Event_Desc;
+        event_image.sprite = targetevent.Event_Picture;
+        eventcount.text = stacked_events.Count.ToString();
+        for (int i = targetevent.eventoptions.Count; i < Options.Length; i++)
         {
             Options[i].SetActive(false);
+        }
+        for (int i = 0; i < targetevent.eventoptions.Count; i++)
+        {
+            TextMeshProUGUI text = Options[i].GetComponent<TextMeshProUGUI>();
+            text.text = targetevent.eventoptions[i].name + "<br>" + targetevent.eventoptions[i].desc;
         }
     }
 
 
+    private Event_data eventoptionstrainer(Event_data eventcls)
+    {
+        Event_data evnt = eventcls;
+        List<EventOption> newlist = new List<EventOption>();
+        List<EventOption> templist = new List<EventOption>();
+        foreach (EventOption option in evnt.eventoptions)
+        {
+            if (option.Randomized == true)
+            {
+                bool rand = (UnityEngine.Random.value > 0.5f);
+
+                if (rand)
+                    templist.Add(option);
+            }
+            else
+                templist.Add(option);
+        }
+        foreach (EventOption option in templist)
+        {
+            
+            if(trigger_checker(option.trigger))
+            {
+                newlist.Add(option);
+            }
+            
+        }
+        evnt.eventoptions = newlist;
+        
+        return evnt;
+    }
+
+    public void item_activate(int i)
+    {
+        //Core.core.aud.AudioPlay(0);
+        Crew_Sc target = Core.core.Crew_Read_New(i);
+        int j = changgo.FindIndex(x => x.name == targetitemname);
+        
+        if (trigger_checker_mini(changgo[j].trigger, target) && changgo[j].have > 0)
+        {
+            foreach(Item_effect efct in changgo[j].effect)
+            {
+                if(efct.stateffect.Any())
+                {
+                    foreach(Stat_st st in efct.stateffect)
+                    {
+                        target.CrewEffect_Function(st);
+                    }
+                }
+                if(efct.traiteffect.Any())
+                {
+                    foreach(Trait_st tr in efct.traiteffect)
+                    {
+                        target.CrewTrait_Effect_Function(tr);
+                    }
+                }
+                if(efct.itemeffect.Any())
+                {
+                    foreach (Item_st it in efct.itemeffect)
+                    {
+                        if(it.stack > 0)
+                        {
+                            Itemstorage_input(it.name, it.stack);
+                        }
+                        else
+                        {
+                            Itemstorage_output(it.name, it.stack);
+                        }
+                    }
+                }
+            }
+            changgo[j].have -= 1;
+            ItemcontainerSetting();
+            //소리 넣기
+            switch(changgo[j].category)
+            {
+                case item_category.equipment:
+                    Core.core.aud.AudioPlay(4);
+                    break;
+                case item_category.food:
+                    Core.core.aud.AudioPlay(2);
+                    break;
+                case item_category.others:
+                    Core.core.aud.AudioPlay(4);
+                    break;
+            }
+        }
+        Core.core.Crew_Statue_Changed();
+    }
 
     public bool trigger_checker(triggers trig)
     {
@@ -568,19 +635,30 @@ public class Expedition : MonoBehaviour
             List<ExpeditionCrew> crew_old = new List<ExpeditionCrew>();
 
             crew_old = Core.core.Crew_Read_All();
-            foreach(Trait_st trait_st in trig.Trait_trigger)
+            foreach(ExpeditionCrew crew in crew_old)
             {
-                foreach(ExpeditionCrew crew in crew_old)
+                foreach(Trait_st st in trig.Trait_trigger)
                 {
-                    foreach(Trait_data trait in crew.Traits)
+                    Trait_data temp = Trait_Library.instance.GetTrait(st.name);
+                    if(crew.Traits.Contains(temp))
                     {
-                        if(trait.name == trait_st.name)
-                        {
-                            Output.Add(trait_st.b);
-                        }
+                        Output.Add(st.b);
                     }
                 }
             }
+            //foreach(Trait_st trait_st in trig.Trait_trigger)
+            //{
+            //    Trait_data temp = Trait_Library.instance.GetTrait(trait_st.name);
+            //    foreach (ExpeditionCrew crew in crew_old)
+            //    {
+                    
+            //        if(crew.Traits.Contains(temp))
+            //        {
+            //            Output.Add(trait_st.b);
+            //        }
+
+            //    }
+            //}
         }
 
         if(trig.progress_trigger.Any())
@@ -649,7 +727,7 @@ public class Expedition : MonoBehaviour
                 Output.Add(false);
         }
 
-        Output.Add(!trig.trigger_only);
+        //Output.Add(!trig.trigger_only);
 
         if(Output.Contains(false))
         {
@@ -718,6 +796,13 @@ public class Expedition : MonoBehaviour
             }
         }
 
+        if(trig.targetID.Any())
+        {
+            crew.Export_Crew_Const();
+            if (!trig.targetID.Contains(crew.export.CREW_ID))
+                Output.Add(false);
+        }
+
         if (Output.Contains(false))
         {
             return false;
@@ -725,45 +810,113 @@ public class Expedition : MonoBehaviour
         else
             return true;
     }
+
+    
     public void Option_Button(int num)
     {
         Event_data eventcls = stacked_events[0];
 
         EventOption option = eventcls.eventoptions[num];
 
-        List<Crew_Sc> crews = Core.core.Crew_Read_All_New();
+        
 
         foreach(Effect efct in option.effects)
         {
-            foreach(Crew_Sc crew in crews)
+            effectworkingmethod(efct);
+        }
+        crew_death_checker();
+        stacked_events.RemoveAt(0);
+        if(stacked_events.Any())
+        {
+            eventloader();
+        }
+        else
+        {
+            UI_form_change(3);
+        }
+        Core.core.Crew_Statue_Changed();
+        Core.core.aud.AudioPlay(0);
+    }
+    private void effectworkingmethod(Effect efct)
+    {
+        List<Crew_Sc> crews = Core.core.Crew_Read_All_New();
+        if (!efct.randomtarget)
+        {
+            foreach (Crew_Sc crew in crews)
             {
-                if(trigger_checker_mini(efct.target, crew))
+                if (trigger_checker_mini(efct.target, crew))
                 {
-                    if(efct.traiteffect.Any())
+                    if (efct.traiteffect.Any())
                     {
 
 
-                        foreach(Trait_st traitst in efct.traiteffect)
+                        foreach (Trait_st traitst in efct.traiteffect)
                         {
                             crew.CrewTrait_Effect_Function(traitst);
-                            
+
                         }
-                        
+
                     }
 
-                    if(efct.stateffect.Any())
+                    if (efct.stateffect.Any())
                     {
-                        foreach(Stat_st statst in efct.stateffect)
+                        foreach (Stat_st statst in efct.stateffect)
                         {
                             crew.CrewEffect_Function(statst);
                         }
                     }
                 }
+
             }
-            
+            if (efct.itemeffect.Any())
+            {
+                foreach (Item_st item in efct.itemeffect)
+                {
+                    if (item.stack > 0)
+                    {
+                        Itemstorage_input(item.name, item.stack);
+                    }
+                    else
+                        Itemstorage_output(item.name, item.stack);
+                }
+            }
+            if (efct.event_effect.Any())
+            {
+                //if(efct.event_effect[0] == "random")
+                //{
+                //    Random_event_Creator(false);
+                //}
+
+                Event_data nextevent = Event_Library.instance.GetEvent((efct.event_effect[0]));
+                stacked_events.Insert(1, nextevent);
+
+            }
+        }
+        else
+        {
+            int i = UnityEngine.Random.Range(0, crews.Count);
+            if (efct.traiteffect.Any())
+            {
+
+
+                foreach (Trait_st traitst in efct.traiteffect)
+                {
+                    crews[i].CrewTrait_Effect_Function(traitst);
+
+                }
+
+            }
+
+            if (efct.stateffect.Any())
+            {
+                foreach (Stat_st statst in efct.stateffect)
+                {
+                    crews[i].CrewEffect_Function(statst);
+                }
+            }
+
         }
     }
-    
     public void Undo_Bt()
     {
         switch(statue)
@@ -819,6 +972,7 @@ public class Expedition : MonoBehaviour
                 General_Info_Container.SetActive(false);
                 Action_Container.SetActive(false);
                 ItemBookMark.SetActive(false);
+                ItemContainer.SetActive(false);
                 Crew_Info_container.SetActive(true);
                 //statue = expedition_state.crewinfo;
                 break;
@@ -880,10 +1034,12 @@ public class Expedition : MonoBehaviour
 
         }
         UI_form_change(0);
+        
         //Core.core.aud.AudioPlay(0);
 
 
         Core.core.Action_do();
+        eventloader();
         Core.core.Crew_Statue_Changed();
         while (Curtain.alpha != 0)
         {
@@ -935,8 +1091,15 @@ public class Expedition : MonoBehaviour
             if (crews.CREW_ID == 0)
                 itemtargetcrew[i].gameObject.SetActive(false);
             else
-
+                if (crews.portrait < 100)
+            {
+                itemtargetcrew[i].sprite = Core.core.Crew_Portrait_Set[crews.portrait];
+            }
+            else
+            {
                 itemtargetcrew[i].sprite = Core.core.Unique_Crew_Portrait_Set[crews.portrait - 100];
+            }
+            //itemtargetcrew[i].sprite = Core.core.Unique_Crew_Portrait_Set[crews.portrait - 100];
             //else
             //{
             //    Image img = itemtargetcrew[i].GetComponent<Image>();
@@ -988,22 +1151,144 @@ public class Expedition : MonoBehaviour
         }
     }
 
+    private void round_storage_check()
+    {
+        foreach(Item_data item in changgo)
+        {
+            switch (item.name)
+            {
+                case "썰매 개":
+                    Itemstorage_output("사료", item.have);
 
-    //private List<Item_data> Itempool_Generator()
-    //{
-    //    List<Item_data> output = new List<Item_data>();
+                    break;
+                case "썰매 곰":
+                    Itemstorage_output("사료", item.have * 8);
+
+                    break;
+                case "조랑말":
+                    Itemstorage_output("말 사료", item.have * 2);
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
 
 
+    public bool storage_check(string name, int stack)
+    {
+        if (changgo.Exists(x => x.name == name))
+        {
+            Item_data item = changgo.Find(x => x.name == name);
+            if (item.have > stack)
+                return true;
+            else
+                return false;
+        }
+        else
+            return false;
+    }
+    public void Itemstorage_output(string name, int stack)
+    {
+        if (changgo.Exists(x => x.name == name))
+        {
+            int i = changgo.FindIndex(x => x.name == name);
 
-    //    //switch (UnityEngine.Random.Range(0, 5))
-    //    //{
 
-    //    //}
+            if (changgo[i].have > stack)
+            {
+                changgo[i].have += stack;
+
+            }
+            else
+            {
+                changgo[i].have = 0;
+            }
+        }
+    }
 
 
+    public void expedition_ends(bool victory)
+    {
+        DontDestroyOnLoad(this);
+        if(victory)
+        {
+            SceneManager.LoadScene("Title_Scene");
 
 
-    //    return output;
-    //}
+        }
+        else
+        {
+            //SceneManager.LoadScene()
+        }
+    }
+    private int deathcounter = 0;
+    GameObject credit_controller;
+    private void crew_death_checker()
+    {
+        List<ExpeditionCrew> crews = Core.core.Crew_Read_All();
+
+        foreach(ExpeditionCrew crew in crews)
+        {
+            if(crew.HP <= 0)
+            {
+                int index = crews.IndexOf(crew);
+                Core.core.Crew_reset(index);
+                Core.core.aud.AudioPlay(5);
+                deathcounter++;
+            }
+            else if(crew.hunger <= 0)
+            {
+                int index = crews.IndexOf(crew);
+                Core.core.Crew_reset(index);
+                Core.core.aud.AudioPlay(5);
+                deathcounter++;
+            }
+        }
+
+        List<bool> templist = new List<bool>();
+        if (Core.core.crew_life_check())
+        {
+            creditinfo info = new creditinfo();
+            info.progress = progress;
+            info.currentday = currentdays;
+            info.month = month;
+            info.day = days;
+            info.deathcount = deathcounter;
+            info.difficult = Option_Setting_script.settings.difficult;
+            info.additional_score = 0;
+            DontDestroyOnLoad(this);
+            SceneManager.LoadScene("Credit_fail_scene");
+            credit_controller = GameObject.Find("credit_controller");
+            credit_controller.GetComponent<Credit_script>().getcreditinfo(info);
+            Destroy(this);
+        }
+            
+    }
+
+    private void progresschecker()
+    {
+        if(progress >= 5f)
+        {
+            int a = Mathf.RoundToInt(progress) / 5;
+
+            if (progresscheckerarray[a] == false)
+            {
+                progresscheckerarray[a] = true;
+                Event_data nextevent = Event_Library.instance.GetEvent("보급창 도착");
+                stacked_events.Insert(0, nextevent);
+            }
+        }
+        
+    }
 }
 
+public class creditinfo
+{
+    public float progress;
+    public int deathcount, day, month, currentday;
+    public int difficult,additional_score;
+
+}
